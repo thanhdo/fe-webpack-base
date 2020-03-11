@@ -1,0 +1,21 @@
+extends ../layouts/master.pug
+
+block title
+  title Cards Compare
+
+block basicSeo
+  meta(name='description' content='card compare')
+  meta(name='keywords', content='card, compare')
+  meta(name='author' content='')
+
+block content
+  //- Section Breadcumbs
+
+  //- Section Card Compare
+  include ../components/card-list/card-list.pug
+  include ../components/compare-cards/compare-cards.pug
+  //- Section Add Card
+  include ../components/add-card/add-card.pug
+  //- Section Talk To Us
+  include ../components/talk-to-us/talk-to-us.pug
+

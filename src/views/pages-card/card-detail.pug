@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block title
+  title Card Detail
+
+block basicSeo
+  meta(name='description' content='card detail')
+  meta(name='keywords', content='card, detail')
+  meta(name='author' content='')
+
+block content
+  //- Section Masthead Default
+  
+  //- Section Masthead Card Detail
+  include ../components-card/card-detail-banner/card-detail-banner.pug
+  //- Section Card Detail Content
+  include ../components-card/card-detail-content/card-detail-content.pug
+  //- Section Promotion (like homepage)
+
+  //- Section Related Other Cards
+
+  //- Section Talk To Us
+  include ../components/talk-to-us/talk-to-us.pug

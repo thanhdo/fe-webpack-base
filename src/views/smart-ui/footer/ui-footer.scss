@@ -1,0 +1,22 @@
+.footer {
+    background: #fff;
+    font-size: 0.8rem;
+    padding: 30px 0;
+
+    section {
+        &.link {
+            padding-bottom: 20px;
+        }
+
+        &.content {
+            padding-top: 30px;
+            border-top: solid 1px;
+        }
+    }
+
+    ul {
+        li {
+            list-style-type: none;
+        }
+    }
+}

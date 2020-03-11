@@ -1,0 +1,56 @@
+.modal {
+    .modal-content {
+        overflow: hidden;
+        border-radius: 0;
+        border: none;
+
+       .modal-header {
+            position: relative;
+            border-radius: 0;
+            border: none;
+            padding: 30px 25px 15px;
+            color: #008347;
+
+            &:after {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                right: -40px;
+                top: -40px;
+                content: '';
+                background-color: #008347;
+                z-index: 0;
+                transform: rotate(45deg);
+            }
+
+            .close {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 12px;
+                padding: 0;
+                color: white;
+                z-index: 1;
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            padding: 0px 25px 10px;
+            font-weight: bold;
+        }
+
+        .modal-footer {
+            padding: 0px 25px 15px;
+            border-top: none;
+
+            button {
+                width: calc(50% - 10px);
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

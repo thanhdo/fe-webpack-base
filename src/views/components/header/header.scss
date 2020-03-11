@@ -1,0 +1,384 @@
+$top-bg: $body-bg;
+
+$navbar-default-height: 50px !default;
+
+$main-menu-link-hover-bg: #ddd !default;
+$main-menu-link-hover-color: #fff !default;
+$main-menu-link-color: #000 !default;
+$main-menu-link-font-weight: normal !default;
+$main-menu-link-hover-font-weight: inherit !default;
+
+$sub-menu-link-border-bottom: none !default;
+$sub-menu-background: #fff !default;
+$sub-menu-box-shadow: 1px 1px 1px 1px #ccc !default;
+$sub-menu-padding: 5px !default;
+$sub-menu-link-color: #000 !default;
+$sub-menu-link-padding: 5px 25px !default;
+$sub-menu-link-hover-background: #ccc !default;
+$sub-menu-link-hover-color: #000 !default;
+$sub-menu-border-radius: 5px !default;
+$sub-menu-arrow-display: inline-block !default;
+
+$mobile-menu-width: 50px !default;
+$mobile-menu-height: 50px !default;
+$mobile-menu-border: solid 1px !default;
+
+$main-logo-height: 50px !default;
+
+$navbar-secondary-height: 46px !default;
+$navbar-secondary-hover-border-height: 2px !default;
+
+@mixin navbar-primary {
+  .navbar-primary {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      height: $navbar-default-height;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-item {
+      padding: 0 10px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    & > li {
+      height: 100%;
+
+      & > a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: $main-menu-link-color;
+        font-weight: $main-menu-link-font-weight;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $main-menu-link-hover-bg;
+          color: $main-menu-link-hover-color;
+          font-weight: $main-menu-link-hover-font-weight;
+        }
+      }
+    }
+
+    li.has-sub-menu {
+      position: relative;
+
+      @include media-breakpoint-up(md) {
+        padding: 0 15px 0 10px;
+      }
+
+      > a:after {
+        display: $sub-menu-arrow-display;
+        font-family: icomoon;
+        content: "\e901";
+      }
+
+      // INFO: change hover property to test dropdown
+      &:hover {
+        .sub-menu {
+          display: block;
+        }
+      }
+
+      .sub-menu {
+        background: $sub-menu-background;
+        display: none;
+        // INFO: change display property to test dropdown
+        // display: block;
+        box-shadow: $sub-menu-box-shadow;
+        padding: $sub-menu-padding;
+        border-radius: $sub-menu-border-radius;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #eee;
+          display: inline-block;
+          transform: rotate(45deg);
+          top: -5px;
+          left: 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+          position: absolute;
+        }
+
+        > li {
+          &:not(:last-of-type) {
+            border-bottom: $sub-menu-link-border-bottom;
+          }
+
+          > a {
+            // INFO: prevent anchor breaks into 2 lines
+            // this will support dynamic content for anchor
+            // the width of dropdown will equal to the length of anchor
+            white-space: nowrap;
+            display: block;
+            color: $sub-menu-link-color;
+            padding: $sub-menu-link-padding;
+
+            &:hover,
+            &:focus,
+            &:active {
+              background: $sub-menu-link-hover-background;
+              color: $sub-menu-link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    float: right;
+    width: $mobile-menu-width;
+    height: $mobile-menu-height;
+    padding-top: 10px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    .hamburger {
+      content: " ";
+      background: black;
+      width: 48px;
+      height: 7px;
+      display: block;
+      margin-bottom: 7px;
+      border-radius: 3px;
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
+    }
+
+    .hamburger:nth-child(3) {
+      margin-top: -14px;
+    }
+
+    &.hamburger-hover {
+      .hamburger:nth-child(1) {
+        opacity: 0;
+      }
+
+      .hamburger:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      .hamburger:nth-child(3) {
+        transform: rotate(135deg);
+      }
+
+      .hamburger:nth-child(4) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@mixin mainlogo {
+  .main-logo {
+    display: inline-block;
+    height: $main-logo-height;
+  }
+}
+
+@mixin search-box() {
+  width: 0;
+  transition: width 0.5s;
+  background: url("/assets/images/icons/search.svg") right center no-repeat;
+  background-size: 15px;
+  border: none;
+  outline: none;
+  padding: 5px 25px;
+  cursor: pointer;
+  background-position-x: calc(100% - 10px);
+  border-radius: 25px;
+
+  &:focus {
+    width: 250px;
+    background-color: #fff;
+    transition: width 0.5s;
+  }
+}
+
+.top-secondary {
+  z-index: $Z-INDEX-TOP-SECONDARY;
+  position: relative;
+  background: #dde7e9;
+
+  // INFO: this is temporary solution before we have mobile design
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content,
+  &__link {
+    .navbar {
+      @include media-breakpoint-up(md) {
+        height: $navbar-secondary-height;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-item {
+        padding: 0 10px;
+      }
+
+      ul {
+        display: flex;
+        margin-bottom: 0;
+        height: $navbar-secondary-height;
+        padding-left: 0;
+      }
+
+      li {
+        list-style-type: none;
+        height: 100%;
+
+        a {
+          color: black;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          &:hover,
+          &:focus {
+            color: #008347;
+            text-decoration: none;
+            // INFO: we need to decrease the height of element to
+            // compensate for border top when hover/focus
+            border-top: solid $navbar-secondary-hover-border-height #008347;
+            height: calc(100% - #{$navbar-secondary-hover-border-height});
+          }
+        }
+      }
+
+      input {
+        @include search-box();
+      }
+    }
+  }
+}
+
+.top-primary {
+  z-index: $Z-INDEX-TOP;
+  position: relative;
+  background: #eee;
+
+  @include mainlogo();
+  @include navbar-primary();
+
+  @include media-breakpoint-up(md) {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__link,
+  &__content {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+    }
+  }
+
+  &__link {
+    @include media-breakpoint-up(md) {
+      align-items: center;
+    }
+
+    .main-logo {
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__content {
+    @include media-breakpoint-up(md) {
+      float: right;
+    }
+
+    .general-button {
+      padding: 5px 25px;
+      border: none;
+      outline: none;
+      @include button(#008347, #fff);
+    }
+
+    .navbar-sticky {
+      display: none;
+
+      > li {
+        list-style-type: none;
+        padding: 0 20px;
+        height: 100%;
+
+        a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      form {
+        display: flex;
+        margin-right: 10px;
+
+        input {
+          @include search-box();
+        }
+      }
+    }
+  }
+
+  .sticky {
+    display: none;
+  }
+
+  @at-root {
+    &.sticked {
+      .sticky,
+      .navbar-sticky {
+        display: flex;
+      }
+
+      .un-sticky {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+- var creditCard = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu','Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu']
+.container
+  .more-from-vpbank
+    .more-from-vpbank__banner
+      img(src="/assets/images/morefrom.png", alt="")
+      p More From VPBank
+    .more-from-vpbank__content
+      .more-from-vpbank__content--rate
+        .container
+          .row
+            .col-lg-4
+              .nav-tab
+                ul.nav-tab__link
+                  li
+                    a.active(data-link='menu1') deposit rate
+                  li
+                    a(data-link='menu2') currency
+                .nav-tab__content
+                  .menu1.tab-pane.animated.active.fadeInUp(id='menu1')
+                    .container
+                      .row.no-gutters
+                        .col-md-6
+                          .months 3 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 4 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 6 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 12 Months
+                        .col-md-6
+                          .rates 0.50%
+                    .view-all
+                      u View all
+                  .menu2.tab-pane.animated(id='menu2')
+                    .container
+                      .row.no-gutters
+                        .col-md-6
+                          .months 3 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 4 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 6 Months
+                        .col-md-6
+                          .rates 0.50%
+                      .row.no-gutters
+                        .col-md-6
+                          .months 12 Months
+                        .col-md-6
+                          .rates 0.50%
+                    .view-all
+                      u View all
+            .col-lg-8
+              .row.no-gutters
+                .col-lg-6
+                  .story-tips
+                    .tag story & tips
+                    .story-tips-slick
+                      .story-tips
+                        .story-tips__title Lorem ipsum dolor sit amet.
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima? consectetu
+                        .read-more
+                          u Read More
+                      .story-tips
+                        .story-tips__title Lorem ipsum dolor sit amet.
+                        p Lorem ipsum dolor sit amet consecteturadipisicing elit. Eum, minima?
+                        .read-more
+                          u Read More
+                      .story-tips
+                        .story-tips__title Lorem ipsum dolor sit amet.
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, minima?
+                        .read-more
+                          u Read More
+                .col-lg-6
+                    img(src="/assets/images/story-tips.png", alt="")
+    .more-from-vpbank__content--news
+      .container
+        .row
+          .col-lg-8
+            .row
+              .col-lg-6
+                .news
+                  .tag news
+                  .news__img
+                    img(src="/assets/images/news.png", alt="")
+                  .news__text
+                    .title Lorem ipsum dolconsectetur adipisicing elit. Corrupti, eos voluptatem
+                    .read-more
+                      u Read More
+              .col-lg-6
+                .list-news
+                  .list-new__item
+                    each element in creditCard
+                      .list-news__item
+                        .title= element
+                        .read-more
+                          u Read more
+          .col-lg-4
+            .tag AWARDS
+            .awards
+              img(src="/assets/images/awards.png", alt="")
+              img(src="/assets/images/awards.png", alt="")
+              img(src="/assets/images/awards.png", alt="")

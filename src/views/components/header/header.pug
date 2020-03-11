@@ -1,0 +1,77 @@
+.top-secondary
+  .container
+    .top-secondary__link
+      nav.navbar
+        ul
+          li
+            a.navbar-item(href='#') About Us
+          li
+            a.navbar-item(href='#') Investor Relations
+          li
+            a.navbar-item(href='#') News
+          li
+            a.navbar-item(href='#') Recruitment
+    .top-secondary__content
+      nav.navbar
+        form
+          input(autocomplete='off' type='text' name='search' placeholder='What are you looking for?')
+        li
+          a.navbar-item(href='#') Search
+        li
+          a.navbar-item(href='#') Wishlist
+        li
+          a.navbar-item(href='#') Contact Us
+        li
+          a.navbar-item(href='#') Branch & ATM
+      include ../language/language.pug
+
+.top-primary
+  .container
+    .top-primary__link
+      a.main-logo(href='/' title='main logo')
+        img(src='/assets/images/main-logo.png' width='160px' height='50px' alt='main logo')
+      .mobile-menu
+        span.hamburger
+        span.hamburger
+        span.hamburger
+        span.hamburger
+      nav.navbar-primary
+        li.has-sub-menu
+          a.navbar-item(href='#')
+            | RETAIL
+          ul.sub-menu
+            li
+              a.button-link(href='#') Household
+            li
+              a.button-link(href='#') SME
+            li
+              a.button-link(href='#') Corparate
+        li.un-sticky
+          a.navbar-item(href='#') HOUSEHOLD
+        li.un-sticky
+          a.navbar-item(href='#') SME
+        li.un-sticky
+          a.navbar-item(href='#') COPORATE
+        li.sticky
+          a.navbar-item(href='#') Invester Relation
+        li.sticky
+          a.navbar-item(href='#') News
+        li.sticky
+          a.navbar-item(href='#') Recruitement
+    .top-primary__content
+      button.general-button.un-sticky
+        img(src="/assets/images/icons/icon-banking.png", alt="")
+        | INTERNET BANKING
+      nav.navbar-sticky
+        form
+          input(autocomplete='off' type='text' name='search' placeholder='What are you looking for?')
+        li
+          a(href='#')
+            img(src="/assets/images/icons/call.svg", alt="", width="15px", height="15px")
+        li
+          a(href='#')
+            img(src="/assets/images/icons/mark.svg", alt="", width="15px", height="15px")
+        li
+          a(href='#')
+            img(src="/assets/images/icons/lock.svg", alt="", width="15px", height="15px")
+        include ../language/language.pug

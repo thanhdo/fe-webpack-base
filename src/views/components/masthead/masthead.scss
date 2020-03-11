@@ -1,0 +1,58 @@
+.masthead {
+  position: relative;
+
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    position: absolute;
+    top: 20px;
+    @include min-sm{
+      top: 53px;
+    }
+
+    &__title {
+      font-size: 3rem;
+      line-height: 4rem;
+      font-weight: bold;
+
+      @include min-sm {
+        font-size: 6rem;
+        line-height: 8rem;
+      }
+    }
+
+    &__detail {
+      font-size: 3.2rem;
+      font-weight: normal;
+      line-height:  4.7rem;
+      margin-top: 15px;
+    }
+
+    &__card {
+      margin-top: 15px;
+      @include min-sm{
+        margin-top: 35px;
+      }
+    }
+
+    &__tag{
+      font-size: 1.2rem;
+      display: inline-block;
+      font-weight: bold;
+      background-color: white;
+      margin: 8px 0 16px;
+      padding: 5px 10px;
+
+      @include min-sm{
+        font-size: 1.8rem;
+        line-height: 4rem;
+        margin: 15px 0 26px;
+        padding: 0px 25px;
+
+      }
+    }
+  }
+}

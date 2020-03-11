@@ -1,0 +1,255 @@
+$top-bg: $body-bg;
+
+$main-menu-link-hover-bg: #ddd !default;
+$main-menu-link-hover-color: #fff !default;
+$main-menu-link-color: #000 !default;
+$main-menu-link-font-weight: bold !default;
+
+$sub-menu-link-border-bottom: none !default;
+$sub-menu-background: #fff !default;
+$sub-menu-box-shadow: 1px 1px 1px 1px #ccc !default;
+$sub-menu-padding: 5px !default;
+$sub-menu-link-color: #000 !default;
+$sub-menu-link-padding: 5px 25px !default;
+$sub-menu-link-hover-background: #ccc !default;
+$sub-menu-link-hover-color: #000 !default;
+
+$mobile-menu-width: 50px !default;
+$mobile-menu-height: 50px !default;
+$mobile-menu-border: solid 1px !default;
+
+$main-logo-height: 50px !default;
+
+
+
+@mixin navbar-primary {
+    .navbar-primary {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-item {
+            padding: 0 10px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+
+        & > li {
+            height: 100%;
+            & > a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-weight: $main-menu-link-font-weight;
+                color: $main-menu-link-color;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: $main-menu-link-hover-bg;
+                    color: $main-menu-link-hover-color;
+                }
+            }
+        }
+
+        li.has-sub-menu {
+            position: relative;
+            @include media-breakpoint-up(md) {
+                padding: 0 15px 0 10px;
+            }
+
+            > a:after {
+                display: inline-block;
+                font-family: icomoon;
+                content: "\e901";
+            }
+
+            // INFO: change hover property to test dropdown
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+            }
+
+            .sub-menu {
+                background: $sub-menu-background;
+                display: none;
+                // INFO: change display property to test dropdown
+                // display: block;
+                box-shadow: $sub-menu-box-shadow;
+                padding: $sub-menu-padding;
+                border-radius: 5px;
+
+                @include media-breakpoint-up(md) {
+                    position: absolute;
+                }
+
+                > li {
+                    &:not(:last-of-type) {
+                        border-bottom: $sub-menu-link-border-bottom;
+                    }
+
+                    > a {
+                        // INFO: prevent anchor breaks into 2 lines
+                        // this will support dynamic content for anchor
+                        // the width of dropdown will equal to the length of anchor
+                        white-space: nowrap;
+                        display: block;
+                        color: $sub-menu-link-color;
+                        padding: $sub-menu-link-padding;
+
+                        @include media-breakpoint-up(md) {
+                            display: inline-block;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background: $sub-menu-link-hover-background;
+                            color: $sub-menu-link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-menu {
+        float: right;
+        width: $mobile-menu-width;
+        height: $mobile-menu-height;
+        border: $mobile-menu-border;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}
+
+@mixin mainlogo {
+    .main-logo {
+        display: inline-block;
+        height: $main-logo-height;
+    }
+}
+
+.top-secondary {
+    z-index: $Z-INDEX-TOP;
+    position: relative;
+    background: #ddd;
+
+    // INFO: this is temporary solution before we have mobile design
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .language {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: red;
+        }
+    }
+
+    &__content, &__link {
+        .navbar {
+            @include media-breakpoint-up(md) {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &-item {
+                padding: 0 10px;
+            }
+
+            li {
+                list-style-type: none;
+                a {
+                    color: brown;
+                    &:hover,
+                    &:focus {
+                        color: green;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-primary {
+    z-index: $Z-INDEX-TOP;
+    position: relative;
+    background: $body-bg;
+
+    @include mainlogo();
+    @include navbar-primary();
+
+    @include media-breakpoint-up(md) {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__link, &__content {
+        display: block;
+        @include media-breakpoint-up(md) {
+            display: inline-flex;
+        }
+    }
+
+    &__link {
+        @include media-breakpoint-up(md) {
+            align-items: center;
+        }
+
+        .main-logo {
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__content {
+        @include media-breakpoint-up(md) {
+            float: right;
+        }
+
+        .general-button {
+            padding: 5px 25px;
+            border: none;
+            outline: none;
+            @include button (green, #fff);
+        }
+    }
+}
+
+

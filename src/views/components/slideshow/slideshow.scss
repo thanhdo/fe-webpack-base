@@ -1,0 +1,77 @@
+.slideshow {
+  overflow: hidden;
+  &__header {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      height: 638px;
+    }
+
+    .slide-text {
+      position: absolute;
+      top: 112px;
+      left: 105px;
+      max-width: 540px;
+
+      &__h1 {
+        text-transform: capitalize;
+        font-size: 53px;
+      }
+
+      &__p {
+        margin: 20px 0;
+      }
+
+      &__button {
+        button {
+          background: #008347;
+          border: none;
+          text-transform: uppercase;
+          color: white;
+          font-size: 12px;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 170px;
+    left: 100px;
+    text-align: left;
+
+    li button:before {
+      content: url('/assets/images/circle.svg');
+    }
+
+    li.slick-active button:before {
+      content: url('/assets/images/circle-active.svg');
+    }
+  }
+
+  .slick-arrow {
+    &.slick-prev:before {
+      background: url('/assets/images/left-arrow-angle.svg') center no-repeat, #ccc;
+      background-size: 12px;
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    &.slick-next:before {
+      background: url('/assets/images/right-arrow-angle.svg') center no-repeat, #ccc;
+      background-size: 12px;
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+  }
+}

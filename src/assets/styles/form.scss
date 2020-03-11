@@ -1,0 +1,110 @@
+// Button
+.btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+// Button Normal
+.btn-default {
+  @include button-variant($btn-default-bg, $btn-default-border, $btn-default-bg-hover, $btn-default-border-hover, $btn-default-border-active, $btn-default-bg-active);
+
+  @include hover {
+    color: $btn-default-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $btn-default-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-bg, $btn-primary-border, $btn-primary-bg-hover, $btn-primary-border-hover, $btn-primary-border-active, $btn-primary-bg-active);
+
+  @include hover {
+    color: $btn-primary-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $btn-primary-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-bg, $btn-secondary-border, $btn-secondary-bg-hover, $btn-secondary-border-hover, $btn-secondary-border-active, $btn-secondary-bg-active);
+
+  @include hover {
+    color: $btn-secondary-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $btn-secondary-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+// Button Outline
+.btn-outline-default {
+  position: relative;
+  @include button-outline-variant($text-color, #fff, $text-color, darken($text-color, 5%));
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $text-color;
+  }
+}
+
+.btn-outline-primary {
+  position: relative;
+  @include button-outline-variant($primary, #fff, $primary, darken($primary, 5%));
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $primary;
+  }
+}
+
+.btn-outline-secondary {
+  position: relative;
+  @include button-outline-variant($secondary, #fff, $secondary, darken($secondary, 5%));
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $secondary;
+  }
+}

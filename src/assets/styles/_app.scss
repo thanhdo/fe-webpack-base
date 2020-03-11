@@ -1,0 +1,63 @@
+// /*
+//   EN font
+// */
+// @import './base/font-language/en-EN';
+// @import './base/_functions';
+// @import './base/_variables';
+// @import './base/_mixins';
+@import './base/_fonts';
+// @import './base/_global';
+// @import './base/_flexboxgrid';
+// @import './base/_lazyload';
+
+// Variable & mixins
+@import './functions';
+@import './variables';
+@import './mixins';
+
+// Bootstrap
+@import './bootstrap/bootstrap-reboot';
+@import './bootstrap/bootstrap-grid';
+@import './bootstrap/utilities/spacing';
+@import './bootstrap/utilities/clearfix';
+@import './bootstrap/utilities/background';
+@import './bootstrap/utilities/text';
+@import './bootstrap/utilities/embed';
+@import './bootstrap/alert';
+@import './bootstrap/code';
+@import './bootstrap/modal';
+@import './bootstrap/type';
+@import './bootstrap/transitions';
+@import './bootstrap/buttons';
+@import './bootstrap/forms';
+@import './bootstrap/input-group';
+
+// Global
+@import './global';
+@import './form';
+@import './fonts';
+@import './animation';
+@import './components-card';
+
+// Component
+@import '../../views/components/header/header';
+@import '../../views/components/footer/footer';
+@import '../../views/components/user-rating/user-rating';
+@import '../../views/components/user-vote-rating/user-vote-rating';
+@import '../../views/components/breadcrumb/breadcrumb';
+@import '../../views/components/language/language';
+@import '../../views/components/accordion/accordion';
+@import '../../views/components/modal/modal';
+@import '../../views/components/retail-banking/retail-banking';
+@import '../../views/components/talk-to-us/talk-to-us';
+@import '../../views/components/primary-search-bar/primary-search-bar';
+@import '../../views/components/banner-slideshow/banner-slideshow';
+@import '../../views/components/more-from-vpbank/more-from-vpbank';
+@import '../../views/components/promotion/promotion';
+@import '../../views/components/add-card/add-card';
+@import '../../views/components/typography/typography';
+@import '../../views/components/compare-cards/compare-cards.scss';
+@import '../../views/components/nav-tab/nav-tab';
+@import '../../views/components/masthead/masthead';
+@import '../../views/components/card-list/card-list.scss';
+@import '../../views/components/testimony/testimony';

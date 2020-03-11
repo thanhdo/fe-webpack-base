@@ -1,0 +1,168 @@
+- var cardItem = ['VPBank StepUp Credit Card','VPBank StepUp Credit Card'];
+- var dataRow2Benefits = ['Refund for all up to VND','6% for online shopping (fashion, techology, books), Grab, Be, Goviet','Refund for all up to VND','6% for online shopping (fashion, techology, books), Grab, Be, Goviet']
+- var dataRow3Benefits = ['29,000 VND = 1.5 bonus miles for foreign currency speding','29,000 VND = 1.5 bonus mile with VND spending','Donate 3,000 miles of Golden Lotus when spending reches 300 million or more per year']
+- var creditCard = []
+- creditCard.push({name : "1", img: "/assets/images/card.png", dataIndex: "1"})
+- creditCard.push({name : "2", img: "/assets/images/card.png", dataIndex: "2"})
+- creditCard.push({name : "3", img: "/assets/images/card.png", dataIndex: "3"})
+- creditCard.push({name : "4", img: "/assets/images/card.png", dataIndex: "4"})
+- creditCard.push({name : "5", img: "/assets/images/card.png", dataIndex: "5"})
+- creditCard.push({name : "6", img: "/assets/images/card.png", dataIndex: "6"})
+- creditCard.push({name : "7", img: "/assets/images/card.png", dataIndex: "7"})
+- creditCard.push({name : "8", img: "/assets/images/card.png", dataIndex: "8"})
+- creditCard.push({name : "9", img: "/assets/images/card.png", dataIndex: "9"})
+- creditCard.push({name : "10", img: "/assets/images/card.png", dataIndex: "10"})
+- creditCard.push({name : "11", img: "/assets/images/card.png", dataIndex: "11"})
+.container
+  .compare-cards
+    .compare-cards__breadcrumb
+      span.tree Retail/ Card Services/ Compare Cards
+    .compare-cards__content
+      .compare-cards__content__add-card
+        h1.welcome Compare Cards
+        p.introduction Compare the card you've chosen below. Remove a card to add a new card
+        section
+          .row.list-card-item
+            //- each item in cardItem
+            //-   .col-md-4.card-item
+            //-     span.card-item__card-image-container
+            //-       img.card-image(src="/assets/images/card.png", alt="")
+            //-     p.card-item__card-name=item
+            //-     .card-item__rate
+            //-       span.star.checked
+            //-       span.star.checked
+            //-       span.star.checked
+            //-       span.star
+            //-       span.star
+            //-     span.card-item__rate-count (9,974 Cardmember Rated)
+            //-     .card-item__choice-action-button
+            //-       button.button-apply apply now
+            //-       button.button-learn-more learn more
+            //-     span.card-item__remove-card-action - Remove
+            .col-md-4.card-item-action
+              span.card-item-action__card-image-container
+                .add-button
+                  .plus
+                  span Add a card
+      //- INFO: overview Card block
+      .compare-cards__content__overview-cards
+        #overViewCard.home-accordion__card__header
+          h5
+            a.collapsed(data-toggle='collapse' data-target='#collapseOverViewCard' aria-expanded='false' aria-controls='collapseOverViewCard')
+              | Overview
+            i.icon-plus.circle(data-toggle='collapse' data-target='#collapseOverViewCard' aria-expanded='false' aria-controls='collapseOverViewCard')
+        #collapseOverViewCard.home-accordion__card__collapse.collapse(aria-labelledby='overViewCard')
+          .home-accordion__card__collapse__content
+            section
+              .row.main-overview-card
+                .col-md-6
+                  .row
+                    .col-md-4
+                      p.title Card Type
+                      p.title Credit Limit
+                      p.title Interest Rate
+                      p.title Transaction Limit
+                      p.title Annual Fees
+                    .col-md-8
+                      p Titanium
+                      p VND 20 - 500 million
+                      p 2.99%/ month
+                      p 70 million VND/ day
+                      p VND 499,000
+                .col-md-6
+                  p Card Type
+                  p Credit Limit
+                  p Interest Rate
+                  p Transaction Limit
+                  p Annual Fees
+      //- INFO: Benefits Card block
+      .compare-cards__content__benefits-cards
+        #benefitsCards.home-accordion__card__header
+          h5
+            a.collapsed(data-toggle='collapse' data-target='#collapseBenefitsCard' aria-expanded='false' aria-controls='collapseBenefitsCard')
+              | Benefits
+            i.icon-plus.circle(data-toggle='collapse' data-target='#collapseBenefitsCard' aria-expanded='false' aria-controls='collapseBenefitsCard')
+        #collapseBenefitsCard.home-accordion__card__collapse.collapse(aria-labelledby='benefitsCards')
+          .home-accordion__card__collapse__content
+            section
+              .row.main-benefits-cards
+                //- INFO: row 1
+                .col-md-6
+                  .row
+                    .col-md-4
+                      p.title Reward Points
+                    .col-md-8
+                      p Not available
+                .col-md-6
+                  p 1,000 VND = 6 points
+                  p 1,000 VND = 12 points for daily
+                  p necestice, spa, beauty, food
+                //- INFO: row 2
+                .col-md-6
+                  .row
+                    .col-md-4
+                      p.title Refund
+                    .col-md-8
+                      ul.list-item
+                        each item in dataRow2Benefits
+                          li= item
+                .col-md-6
+                      p Not available
+                //- -INFO : row 3
+                .col-md-6
+                  .row
+                    .col-md-4
+                      p.title Free Flight Tickets
+                    .col-md-8
+                      ul.list-item
+                        each item in dataRow3Benefits
+                          li= item
+                .col-md-6
+                  p Not available
+                //- INFO : row 4
+                .col-md-6
+                  .row
+                    .col-md-4
+                      p.title Free Flight Tickets
+                    .col-md-8
+                      p Not available
+                .col-md-6
+                  p Not available
+      //- INFO: Mutual Benefits Card block
+      .compare-cards__content__mutual-benefits-cards
+        #mutualBenefitsCard.home-accordion__card__header
+          h5
+            a.collapsed(data-toggle='collapse' data-target='#collapseMutualBenefitsCard' aria-expanded='false' aria-controls='collapseMutualBenefitsCard')
+              | Overview
+            i.icon-plus.circle(data-toggle='collapse' data-target='#collapseMutualBenefitsCard' aria-expanded='false' aria-controls='collapseMutualBenefitsCard')
+        #collapseMutualBenefitsCard.home-accordion__card__collapse.collapse(aria-labelledby='mutualBenefitsCard')
+      //- INFO: Registration conditions Card block
+      .compare-cards__content__registration-conditions
+        #registrationConditions.home-accordion__card__header
+          h5
+            a.collapsed(data-toggle='collapse' data-target='#collapseRegistrationConditions' aria-expanded='false' aria-controls='collapseRegistrationConditions')
+              | Registration Procedures And Conditions
+            i.icon-plus.circle(data-toggle='collapse' data-target='#collapseRegistrationConditions' aria-expanded='false' aria-controls='collapseRegistrationConditions')
+        #collapseRegistrationConditions.home-accordion__card__collapse.collapse(aria-labelledby='registrationConditions')
+          .home-accordion__card__collapse__content.add-card
+            section
+              .row
+                each item in cardItem
+                  .col-md-4.card-item
+                    span.card-item__card-image-container
+                      img.card-image(src="/assets/images/card.png", alt="")
+                    p.card-item__card-name=item
+                    .card-item__choice-action-button
+                      button.button-apply apply now
+                .col-md-4.card-item-action
+                  span.card-item-action__card-image-container
+                    .add-button
+                      .plus
+                      span Add a card
+    .add-card-content
+      each element in creditCard
+          .credit-card-item(data-index=element.dataIndex)
+            .card-image
+              img(src= "/assets/images/card.png", alt="")
+            p.card-name= element.name
+            span.card-action + Add

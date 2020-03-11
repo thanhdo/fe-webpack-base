@@ -1,0 +1,217 @@
+.card-detail-content {
+  &__head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    @include min-sm {
+      justify-content: space-between;
+    }
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      display: none;
+
+      @include min-sm {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        list-style: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include min-sm {
+          margin-right: 70px;
+        }
+
+        a {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          color: #8E989A;
+          text-decoration: none;
+
+          &:hover {
+            color: #008346;
+            font-weight: bold;
+          }
+
+          &.active{
+            color: #008346;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    &__item {
+      display: flex;
+      margin-bottom: 1px;
+      padding: 0;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #ddd;
+
+      &:first-child {
+        border-top: 2px solid #ddd;
+      }
+
+      @include min-sm {
+        flex-wrap: nowrap;
+        padding: 40px 0;
+        border-bottom: none;
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+
+      &__left {
+        width: 100%;
+        @include min-sm {
+          width: 25%;
+        }
+
+        h1 {
+          font-size: 2.4rem;
+          line-height: 4rem;
+          font-weight: bold;
+          position: relative;
+
+          @include min-sm{
+            font-size: 4.8rem;
+            line-height: 6.2rem;
+          }
+
+          a {
+            pointer-events: visible;
+
+            @include min-sm {
+              pointer-events: none;
+            }
+
+            & + .icon-plus {
+              cursor: pointer;
+              &:before{
+                  content: "\e90a";
+              }
+            }
+
+            &.collapsed + .icon-plus {
+                &:before{
+                    content: "\e90d";
+                }
+            }
+          }
+
+          i {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include min-sm{
+              display: none;
+            }
+          }
+        }
+      }
+
+      &__right {
+        width: 100%;
+        @include min-sm {
+          width: 75%;
+        }
+
+        &__list {
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            position: relative;
+            padding-left: 30px;
+            display: inline-block;
+            list-style: none;
+            width: 100%;
+            margin-right: 5%;
+            margin-top: 20px;
+
+            @include min-sm {
+              width: 30%;
+
+              &:nth-child(3n+3) {
+                margin-right: 0;
+              }
+              
+              &:nth-child(-n+3) {
+                margin-top: 0px;
+              }
+            }
+            
+            &:after {
+              position: absolute;
+              left: 5px;
+              top: 5px;
+              content: '';
+              width: 15px;
+              height: 15px;
+              background-image: url(/assets/images/language-vn.png);
+              background-size: contain;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
+
+            .link-read {
+              color: #8A9496;
+              display: inline-block;
+              margin-top: 10px;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .comment-capcha {
+          margin-bottom: 25px;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          textarea {
+            height: 100px;
+            width: 80%;
+          }
+
+          .capcha {
+            width: 20%;
+            margin-left: 2%;
+          }
+        }
+
+        .home-accordion__card{
+          &:nth-child(even){
+            .home-accordion__card__header{
+              background-color: #F4F7F8;
+            }
+          }
+          &:last-child{
+            border-bottom: none;
+
+            @include min-sm{
+              border-bottom: 2px solid #c9c9c9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

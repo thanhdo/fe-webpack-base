@@ -1,0 +1,55 @@
+.home-accordion {
+    &__card {
+        border-bottom: 2px solid #c9c9c9;
+
+        &:first-child {
+            border-top: 2px solid #c9c9c9;
+        }
+
+        &__header {
+            h5 {
+                position: relative;
+                margin: 0;
+
+                a {
+                    display: inline-block;
+                    margin: 10px 0 12px;
+                    cursor: pointer;
+
+                    & + .icon-plus {
+                        cursor: pointer;
+                        &:before{
+                            content: "\e90a";
+                        }
+                    }
+
+                    &.collapsed + .icon-plus {
+                        &:before{
+                            content: "\e90d";
+                        }
+                    }
+                }
+
+                .icon-plus {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    color: green;
+                    border-radius: 50%;
+
+                    &.circle {
+                        border: 1px solid green;
+                    }
+                }
+            }
+        }
+
+        &__collapse {
+            &__content {
+                border-top: 2px solid #c9c9c9;
+                padding: 15px 0 20px;
+            }
+        }
+    }
+}

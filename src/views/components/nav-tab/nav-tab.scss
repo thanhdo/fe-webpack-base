@@ -1,0 +1,51 @@
+$nav-tab-border-color: #ddd !default;
+$nav-tab-link-padding: 5px 15px !default;
+$nav-tab-link-bg: $body-bg !default;
+$nav-tab-link-hover-bg: #ccc !default;
+.nav-tab {
+  &__link {
+    padding-left: 0;
+    display: flex;
+    margin-bottom: 0;
+    border-bottom: solid 1px $nav-tab-border-color;
+
+    li {
+      list-style-type: none;
+      // INFO: this is to create active style for nav link
+      margin-bottom: -1px;
+
+      &:not(:last-of-type) a {
+        border-right: none;
+      }
+
+      a {
+        padding: $nav-tab-link-padding;
+        display: inline-block;
+        background: $nav-tab-link-bg;
+        border: solid 1px $nav-tab-border-color;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $nav-tab-link-hover-bg;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        &.active {
+          // INFO: this is to create active style for nav link
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__content {
+    .tab-pane {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

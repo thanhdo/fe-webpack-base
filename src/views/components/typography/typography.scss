@@ -1,0 +1,121 @@
+// Typo
+.docs-section {
+  margin-bottom: $global-margin;
+
+  .name-title {
+    color: $gray-darker;
+    display: inline-block;
+    font-size: $h1-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: $global-margin;
+  }
+
+  .sub-title {
+    font-size: $h3-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $gray;
+    margin-bottom: $global-margin;
+  }
+}
+
+.example-type {
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    margin: $global-margin 0;
+  }
+}
+
+// Swatch Color
+.swatch-item {
+  padding: $global-padding;
+  color: $white;
+  margin-bottom: $global-margin;
+}
+
+.color-primary {
+  background: $primary;
+}
+
+.color-secondary {
+  background: $secondary;
+}
+
+.color-warning {
+  background: $warning;
+}
+
+.color-danger {
+  background: $danger;
+}
+
+.color-info {
+  background: $info;
+}
+
+.color-success {
+  background: $success;
+}
+
+.color-gray-darker {
+  background: $gray-darker;
+}
+
+.color-gray-dark {
+  background: $gray-dark;
+}
+
+.color-gray {
+  background: $gray;
+}
+
+.color-gray-light {
+  background: $gray-light;
+  color: $black;
+}
+
+.color-gray-lighter {
+  background: $gray-lighter;
+  color: $black;
+}
+
+.color-gray-lightest {
+  background: $gray-lightest;
+  color: $black;
+}
+
+// Navigation
+.example-navigation {
+  .tab-content {
+    display: none;
+  }
+}
+
+// Button
+.example-button {
+  margin-bottom: $global-margin;
+
+  > a {
+    margin: 0 $global-margin 0 0;
+  }
+}
+
+// Input
+.example-inputs {
+  .form-group {
+    margin-bottom: $global-margin;
+  }
+
+  label {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+- var cardItem = []
+- cardItem.push({name : "Card 1",  wishlist : 'no', type : "CREDIT CARD", dataIndex: "1"})
+- cardItem.push({name : "Card 2",  wishlist : 'yes', type : "DEBIT CARD",dataIndex: "2"})
+- cardItem.push({name : "Card 3",  wishlist : 'yes', type : "CREDIT CARD", dataIndex: "3"})
+- cardItem.push({name : "Card 4",  wishlist : 'no', type : "POINT CARD", dataIndex: "4"})
+- cardItem.push({name : "Card 5",  wishlist : 'yes', type : "DEBIT CARD", dataIndex: "5"})
+- cardItem.push({name : "Card 6",  wishlist : 'no', type : "CREDIT CARD", dataIndex: "6"})
+- cardItem.push({name : "Card 7",  wishlist : 'yes', type : "POINT CARD", dataIndex: "7"})
+- cardItem.push({name : "Card 8",  wishlist : 'no', type : "DEBIT CARD", dataIndex: "8"})
+- cardItem.push({name : "Card 9",  wishlist : 'no', type : "CREDIT CARD", dataIndex: "9"})
+- cardItem.push({name : "Card 10", wishlist : 'yes',  type : "DEBIT CARD", dataIndex: "10"})
+- cardItem.push({name : "Card 11", wishlist : 'yes',  type : "POINT CARD", dataIndex: "11"})
+- cardItem.push({name : "Card 12", wishlist : 'no',  type : "DEBIT CARD", dataIndex: "12"})
+- cardItem.push({name : "Card 13", wishlist : 'yes',  type : "CREDIT CARD", dataIndex: "13"})
+- cardItem.push({name : "Card 14", wishlist : 'no',  type : "POINT CARD", dataIndex: "14"})
+- cardItem.push({name : "Card 15", wishlist : 'yes',  type : "CREDIT CARD", dataIndex: "15"})
+- cardItem.push({name : "Card 16", wishlist : 'no',  type : "CREDIT CARD", dataIndex: "16"})
+- cardItem.push({name : "Card 17", wishlist : 'yes',  type : "POINT CARD", dataIndex: "17"})
+- cardItem.push({name : "Card 18", wishlist : 'no',  type : "DEBIT CARD", dataIndex: "18"})
+.container
+    .card-list
+        .card-list__filter
+            span Filter
+            button.choice-button.active(data-type = "ALL") All card
+            button.choice-button(data-type = "CREDIT CARD") credit
+            button.choice-button(data-type = "DEBIT CARD") debit
+            button.choice-button(data-type = "POINT CARD") point
+        button.card-list__button-compare-card COMPARE CARD (0)
+        .card-list__clear-float
+        .row.card-list__list-item-display
+        .row.card-list__list-item
+            each item in cardItem
+                .col-md-4.card-item(data-index= item.dataIndex data-type= item.type)
+                    .card-item__image-container
+                        img.card-item__image-container--card-image(src="/assets/images/card.png", alt="")
+                    .card-item__description
+                        p.card-type= item.type
+                        p.name= item.name
+                        ul.description
+                            li Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita blanditiis amet impedit
+                            li Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita blanditiis amet impedit
+                        .add-compare
+                            input(type='checkbox' name='vehicle1' value='Bike')
+                            span &nbsp;&nbsp; ADD TO COMPARE CARD
+                            br
+                        .choice-button-action
+                            button.button-apply APPLY NOW
+                            button.button-infomation MORE INFOMATION
+        .card-list__pagination

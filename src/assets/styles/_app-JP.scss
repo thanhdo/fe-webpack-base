@@ -1,0 +1,14 @@
+/*
+  EN font
+*/
+@import './base/font-language/jp-JP';
+@import './base/_functions';
+@import './base/_variables-JP';
+@import './base/_mixins';
+@import './base/_fonts';
+@import './base/_global';
+@import './base/_flexboxgrid';
+@import './base/_lazyload';
+
+// Component
+@import '../../views/components/header/header';

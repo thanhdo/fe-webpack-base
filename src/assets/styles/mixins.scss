@@ -1,0 +1,108 @@
+@mixin button($background, $color) {
+  background: $background;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background: darken($background, 15%);
+  }
+}
+
+
+// Min media queries breakpoints
+// --------------------------------------------------
+
+// min screen 320px
+@mixin min-xxs {
+  @media screen and (min-width: $min-xxs) {
+    @content;
+  }
+}
+
+// min screen 480px
+@mixin min-xs {
+  @media screen and (min-width: $min-xs) {
+    @content;
+  }
+}
+
+// min screen 768px
+@mixin min-sm {
+  @media screen and (min-width: $min-sm) {
+    @content;
+  }
+}
+
+// min screen 992px
+@mixin min-md {
+  @media screen and (min-width: $min-md) {
+    @content;
+  }
+}
+
+// min screen 1200px
+@mixin min-lg {
+  @media screen and (min-width: $min-lg) {
+    @content;
+  }
+}
+
+// min screen 1400px
+@mixin min-xl {
+  @media screen and (min-width: $min-xl) {
+    @content;
+  }
+}
+
+// min screen 1920px
+// @mixin min-xxl {
+//   @media screen and (min-width: $min-xxl) {
+//     @content;
+//   }
+// }
+
+
+// Max media queries breakpoints
+// --------------------------------------------------
+
+// max screen 479px
+@mixin max-xxs {
+  @media screen and (max-width: $max-xxs) {
+    @content;
+  }
+}
+
+// max screen 767px
+@mixin max-xs {
+  @media screen and (max-width: $max-xs) {
+    @content;
+  }
+}
+
+// max screen 991px
+@mixin max-sm {
+  @media screen and (max-width: $max-sm) {
+    @content;
+  }
+}
+
+// max screen 1199px
+@mixin max-md {
+  @media screen and (max-width: $max-md) {
+    @content;
+  }
+}
+
+// max screen 1399px
+@mixin max-lg {
+  @media screen and (max-width: $max-lg) {
+    @content;
+  }
+}
+
+// max screen 1919px
+// @mixin max-xl {
+//   @media screen and (max-width: $max-xl) {
+//     @content;
+//   }
+// }

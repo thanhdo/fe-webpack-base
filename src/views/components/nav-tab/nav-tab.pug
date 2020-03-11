@@ -1,0 +1,18 @@
+.nav-tab
+  ul.nav-tab__link
+    li
+      a.active(href='#menu1', data-link='menu1') Tab 1
+    li
+      a(href='#menu2', data-link='menu2') Tab 2
+    li
+      a(href='#menu3', data-link='menu3') Tab 3
+  .nav-tab__content
+    .menu1.tab-pane.animated.active.fadeInUp(id='menu1')
+      h3 header 1
+      p text 1
+    .menu2.tab-pane.animated(id='menu2')
+      h3 header 2
+      p text 2
+    .menu3.tab-pane.animated(id='menu3')
+      h3 header 3
+      p text 3

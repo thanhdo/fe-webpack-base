@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block title
+  title VPBanks Home
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='author' content='')
+
+block content
+  include ../components/banner-slideshow/banner-slideshow.pug
+  //- Primary Search Bar
+  include ../components/primary-search-bar/primary-search-bar.pug
+  //- Section Retail Banking
+  include ../components/retail-banking/retail-banking.pug
+  //- Section Promotion
+  include ../components/promotion/promotion.pug
+  //- Section More From VPBank
+  include ../components/more-from-vpbank/more-from-vpbank.pug
+  //- Section Talk To Us
+  include ../components/talk-to-us/talk-to-us.pug
+

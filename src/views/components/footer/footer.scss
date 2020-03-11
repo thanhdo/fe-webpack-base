@@ -1,0 +1,50 @@
+.footer {
+    background: #fff;
+    font-size: 1.4rem;
+    padding: 60px 0 30px;
+    &__link {
+        padding-bottom: 25px;
+        .header {
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                margin-bottom: 8px;
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 40px;
+        border-top: solid 2px #ccc;
+        .img-logo {
+            border-right: 2px solid #ccc;
+            width: 100%;
+        }
+        span:first-child {
+            display: block;
+        }
+        .img-facebook ,
+        .img-youtube {
+            margin-right: 16px;
+        }
+        .promo {
+            display: flex;
+            justify-content: flex-end;
+            .img-appstore {
+                margin-right: 16px;
+            }
+            .vpbank {
+                color: black;
+                font-weight: 700;
+                margin-right: 15px;
+            }
+        }
+    }
+}

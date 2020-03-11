@@ -1,0 +1,219 @@
+.more-from-vpbank {
+
+  button.slick-prev.slick-arrow {
+    display: none !important;
+  }
+
+  button.slick-next.slick-arrow {
+    display: none !important;
+  }
+
+  .read-more {
+    color: black;
+    font-size: 14px;
+  }
+
+  .tag {
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    font-size: 12px;
+    font-weight: 900;
+    width: 30%;
+    text-align: center;
+    background: white;
+    padding: 8px 0;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  &__banner {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 88px;
+      font-size: 46px;
+      font-weight: 700;
+      left: 182px;
+    }
+  }
+
+  &__content {
+    &--rate {
+      margin: 60px 0;
+      $nav-tab-border-radius: 5px;
+      $nav-tab-background: green;
+      $nav-tab-header-height: 50px;
+      $nav-tab-link-bg: #ccc;
+
+      .nav-tab {
+        height: 100%;
+        color: #fff;
+
+        &__link {
+          height: $nav-tab-header-height;
+          border-bottom: 0;
+          background: $nav-tab-link-bg;
+          border-top-left-radius: $nav-tab-border-radius;
+          border-top-right-radius: $nav-tab-border-radius;
+          overflow: hidden;
+          text-align: center;
+
+          li {
+            margin-bottom: 0;
+            width: 50%;
+            height: 100%;
+
+            a {
+              width: 100%;
+              height: 100%;
+              border: none;
+              background: $nav-tab-link-bg;
+              text-transform: uppercase;
+              padding-top: 15px;
+
+              &.active {
+                background: $nav-tab-background;
+                border-top-left-radius: $nav-tab-border-radius;
+                border-top-right-radius: $nav-tab-border-radius;
+              }
+            }
+          }
+        }
+
+        &__content {
+          height: calc(100% - #{$nav-tab-header-height});
+          background: $nav-tab-background;
+
+          // INFO: hot fix for bottom border in IE
+          @media screen and (-ms-high-contrast: none),
+          (-ms-high-contrast: active) {
+            /* IE10+ CSS */
+            margin-top: -1px;
+          }
+
+          .tab-pane {
+            height: 100%;
+          }
+
+          .menu1 {
+            padding-top: 30px;
+          }
+
+          .menu2 {
+            padding-top: 30px;
+          }
+
+          .months {
+            margin-left: 25px;
+          }
+
+          .view-all {
+            margin-left: 40px;
+          }
+        }
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: -20px;
+        list-style: none;
+        display: block;
+        text-align: left;
+        padding: 0;
+        margin-left: -10px;
+        width: 100%;
+      }
+
+      .story-tips {
+        height: 100%;
+        background: $gray-light;
+
+        p {
+          margin: 20px 0;
+        }
+      }
+
+      .story-tips-slick {
+        padding: 20px 31px;
+      }
+
+      .story-tips {
+        &__title {
+          font-size: 34px;
+          font-weight: 700;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &--news {
+      .slick-dotted.slick-slider {
+        margin-bottom: 0px;
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: 23px;
+        list-style: none;
+        display: block;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        margin-left: 16px;
+      }
+
+      .news {
+        width: 100%;
+        height: 100%;
+        background: $gray-light;
+
+        &__text {
+          padding: 20px;
+        }
+
+        .tag {
+          position: absolute;
+        }
+      }
+
+      .list-news {
+        height: 343px;
+        overflow: auto;
+        border-radius: 4px;
+
+        &__item {
+          margin: 20px 0;
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 20px;
+          position: relative;
+        }
+
+        &__item:last-child {
+          border: none;
+        }
+      }
+
+      .tag {
+        position: absolute;
+        // INFO : display awards tag above all item of class awards
+        z-index: 1;
+      }
+
+      .awards {
+        position: relative;
+      }
+    }
+  }
+}

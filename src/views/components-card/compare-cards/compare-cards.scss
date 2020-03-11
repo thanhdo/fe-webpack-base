@@ -1,0 +1,271 @@
+$button-apply-color: #008347;
+$button-learn-more-color: #8e989a;
+
+@mixin buttonRemoveStyle {
+  .add-card-action {
+    color: #22e65e;
+    margin-top: 20px;
+    padding: 2px 15px;
+    border: 1px solid #22e65e;
+    border-radius: 25px;
+    font-size: 12px;
+    width: 80px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+@mixin cardItem {
+
+  .card-item,
+  .card-item-action {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px;
+
+    &__card-name {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &__card-image-container {
+      position: relative;
+      display: block;
+      border-radius: 16px;
+
+      &:after {
+        display: block;
+        padding-bottom: 50%;
+        content: '';
+      }
+
+      .card-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .add-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .plus {
+        background: #ffffff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        text-align: center;
+
+        &:before {
+          content: '\f067';
+          font-family: 'FontAwesome';
+          color: #017f40;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__rate {
+      .star {
+        margin-right: 7px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .star:before {
+        content: "\f005";
+        font-family: 'FontAwesome';
+      }
+
+      .star.checked {
+        color: #008347;
+      }
+    }
+
+    &__rate-count {
+      margin-top: 4px;
+      font-size: 18px;
+    }
+
+    &__choice-action-button {
+      margin-top: 25px;
+
+      .button-apply {
+        background: $button-apply-color;
+
+        &:hover {
+          color: $button-apply-color
+        }
+      }
+
+      .button-learn-more {
+        background: $button-learn-more-color;
+        margin-left: 20px;
+
+        &:hover {
+          color: $button-learn-more-color
+        }
+      }
+
+      .button-apply,
+      .button-learn-more {
+        color: #fff;
+        padding: 15px 25px;
+        margin-bottom: 10px;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        width: 46%;
+
+        &:hover {
+          background: #ffffff;
+        }
+      }
+    }
+
+    &__remove-card-action {
+      color: #22e65e;
+      margin-top: 20px;
+      padding: 2px 15px;
+      border: 1px solid #22e65e;
+      border-radius: 25px;
+      font-size: 12px;
+      width: 80px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin addCardAction {
+  .card-item-action {
+    padding: 50px;
+
+    &__card-image-container {
+      background-color: #ababab;
+    }
+  }
+}
+
+.compare-cards {
+  padding: 50px;
+
+  &__breadcrumb {
+    .tree {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+    margin-top: 15px;
+
+    &__add-card {
+      text-align: center;
+      font-weight: bold;
+
+      .welcome {
+        font-weight: bold;
+      }
+
+      .introduction {
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      @include cardItem();
+
+      @include addCardAction();
+    }
+
+    &__overview-cards {
+      .main-overview-card {
+        p.title {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__benefits-cards {
+      margin-top: 15px;
+
+      .main-benefits-cards {
+        p.title {
+          font-weight: bold;
+        }
+
+        ul.list-item {
+          padding: 0;
+          list-style: none;
+          list-style-type: square;
+        }
+      }
+    }
+
+    &__mutual-benefits-cards {
+      margin-top: 15px;
+    }
+
+    &__registration-conditions {
+
+      .add-card {
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+
+        .card-image-container {
+          position: relative;
+          display: block;
+          border-radius: 16px;
+
+          &:after {
+            display: block;
+            padding-bottom: 50%;
+            content: '';
+          }
+
+          .card-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+
+          .add-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .plus {
+            background: #ffffff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+
+            &:before {
+              content: '\f067';
+              font-family: 'FontAwesome';
+              color: #017f40;
+              cursor: pointer;
+            }
+          }
+        }
+
+        @include cardItem();
+        @include addCardAction();
+      }
+    }
+  }
+}

@@ -1,0 +1,428 @@
+// CORE TYPOGRAPHY
+  =======================================================
+.core-typo
+  .container
+    .docs-section
+      // Headings
+      .row.example-row.example-type
+        .col-lg-6
+          h3.sub-title Heading Text
+          h1
+            | h1. Heading 
+            small Secondary text
+          h2
+            | h2. Heading 
+            small Secondary text
+          h3
+            | h3. Heading 
+            small Secondary text
+          h4
+            | h4. Heading 
+            small Secondary text
+          h5
+            | h5. Heading 
+            small Secondary text
+          h6
+            | h6. Heading 
+            small Secondary text
+          .alert.alert-warning
+            p
+              strong TIPS:
+              |  Create lighter, secondary text in any heading with a generic
+              code &lt;small&gt;
+              |  tag or the
+              code .small
+              |  class.
+        .col-lg-6
+          h3.sub-title Example body text
+          p.lead
+            | This is a 
+            strong lead paragraph.
+            br
+            | Make a paragraph stand out by adding
+            code .lead
+          p
+            | Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.
+          p
+            | Nullam quis risus eget 
+            a(href='#') urna mollis ornare
+            |  vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+          p
+            | The following snippet of text is 
+            strong rendered as bold text
+          p
+            | The following snippet of text is
+            em rendered as italicized text
+          p
+            | An abbreviation of the word attribute is 
+            abbr(title='attribute') attr
+      // //Headings
+
+      // Address & Emphasis
+      .row.example-row.example-type
+        .col-lg-4
+          h3.sub-title Address
+          address
+            strong Company Name
+            br
+            |  795 Folsom Ave, Suite 600
+            br
+            |  San Francisco, CA 94107
+            br
+            abbr(title='Phone') P:
+            |  (123) 456-7890
+          address
+            strong Full Name
+            br
+            abbr(title='Phone') P:
+            |  (123) 456-7890
+            br
+            span#cloake4e2bbc0ee69e95e9a438ec93c97c721
+              a(href='mailto:first.last@example.com') first.last@example.com
+        .col-lg-4
+          h3.sub-title Emphasis classes
+          p.text-muted
+            | This is a
+            code .mute
+            |  paragraph.
+          p.text-primary
+            | This is a
+            code .text-primary
+            |  paragraph.
+          p.text-warning
+            | This is a
+            code .text-warning
+            |  paragraph.
+          p.text-danger
+            | This is a
+            code .text-danger
+            |  paragraph.
+          p.text-success
+            | This is a
+            code .text-success
+            |  paragraph.
+          p.text-info
+            | This is a
+            code .text-info
+            |  paragraph.
+        .col-lg-4
+          h3.sub-title Alignment classes
+          p.text-left
+            | This is a left aligned text
+            code .text-left
+          p.text-center
+            | This is a center aligned text
+            code .text-center
+          p.text-right
+            | This is a right aligned text
+            code .text-right
+          p.text-justify
+            | This is a justify aligned text which is often used in Book Design, Magazine or special Typo Pages. Create a justify aligned text with
+            code .text-justify
+            |  class.
+      // //Address & Emphasis
+    // //CORE TYPOGRAPHY
+
+    // Blockquotes
+    .docs-section
+      h2#example-colors.name-title Blockquotes
+      .row.example-row.example-type
+        .col-lg-12
+          blockquote
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            small
+              | Quote&apos;s author in
+              cite(title='Source Title') Source Title
+    // //Blockquotes
+
+    //
+      TAGS
+      =======================================================
+    .docs-section
+      h2#example-colors.name-title Tags
+      .tags
+        span.tag
+          a.label.label-info(href='#') hotel
+        span.tag
+          a.label.label-info(href='#') booking
+        span.tag
+          a.label.label-info(href='#') discount
+        span.tag
+          a.label.label-info(href='#') location
+        span.tag
+          a.label.label-info(href='#') map
+        span.tag
+          a.label.label-info(href='#') travel
+    // //TAGS
+
+    //
+      COLOR SWATCHES
+      =======================================================
+    .docs-section
+      h2#example-color.name-title Color Swatches
+      // Brand Colors
+      h3.sub-title Brand Colors
+      .row.example-row.example-colors
+        .col-xs-12.col-sm-4
+          .swatch-item.color-primary
+            dl
+              dt #008347
+              dd Brand Primary
+        .col-xs-12.col-sm-4
+          .swatch-item.color-secondary
+            dl
+              dt #ed111c
+              dd Brand Secondary
+        .col-xs-12.col-sm-4
+          .swatch-item.color-warning
+            dl
+              dt #ffdb00
+              dd Brand Warning
+        .col-xs-12.col-sm-4
+          .swatch-item.color-danger
+            dl
+              dt #d9534f
+              dd Brand Danger
+        .col-xs-12.col-sm-4
+          .swatch-item.color-info
+            dl
+              dt #0abceb
+              dd Brand Info
+        .col-xs-12.col-sm-4
+          .swatch-item.color-success
+            dl
+              dt #5cb85c
+              dd Brand Success
+      // Brand Colors
+
+      // Grayscale
+      h3.sub-title Grayscale Levels
+      .row.example-row.example-colors
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray-darker
+            dl
+              dt #343a40
+              dd Gray Darker
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray-dark
+            dl
+              dt #6c757d
+              dd Gray Dark
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray
+            dl
+              dt #adb5bd
+              dd Gray
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray-light
+            dl
+              dt #dee2e6
+              dd Gray Light
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray-lighter
+            dl
+              dt #e9ecef
+              dd Gray Lighter
+        .col-xs-12.col-sm-4
+          .swatch-item.color-gray-lightest
+            dl
+              dt #f8f9fa
+              dd Gray Lightest
+      // //Grayscale
+    // //COLOR SWATCHES
+
+    //
+      BUTTON
+      =======================================================
+    .docs-section
+      h2#example-colors.name-title Buttons
+      .row.example-row.example-type
+        .col-md-12
+          // Button
+          .example-button.clearfix
+            a.btn.btn-default(href='#') Button Default
+            a.btn.btn-primary(href='#') Button Primary
+            a.btn.btn-secondary(href='#') Primary Secondary
+          // //Button
+          // Button Outline
+          .example-button.clearfix
+            a.btn.btn-outline-default(href='#') Button Outline Default
+            a.btn.btn-outline-primary(href='#') Button Outline Primary
+            a.btn.btn-outline-secondary(href='#') Button Outline Secondary
+          // //Button
+    // //BUTTON
+
+    //
+      NAVIGATIONS
+      ==================================================
+    .docs-section
+      h2#example-navigation.name-title Navigations
+      // Tabs & Vertical Menus
+      .row.example-row.example-navigation
+        // Tabs
+        .col-lg-8
+          h3.sub-title Tabs
+          .nav-tab
+            ul.nav-tab__link
+              li
+                a.active(href='#home', data-toggle='tab') Home
+              li
+                a(href='#profile', data-toggle='tab') Profile
+              //- li
+                a.disabled Disabled
+              //- li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')  Dropdown
+                ul.dropdown-menu
+                  li
+                    a(href='#dropdown1', data-toggle='tab') Action
+                  li
+                    a(href='#dropdown2', data-toggle='tab') Another action
+                  li
+                    a(href='#dropdown2', data-toggle='tab') Another action
+            .nav-tab__content
+              #home.animated.active.fadeInUp
+                p
+                  | In the area of graphical user interfaces (GUI), a
+                  strong tabbed document interface
+                  |  (TDI) or a Tab is one that allows multiple documents to be contained within a single window, using tabs as a navigational widget for switching between sets of documents. It is an interface style most commonly associated with web browsers, web applications, text editors, and preference panes.
+                p
+                  | GUI tabs are modeled after traditional card tabs inserted in paper files or card indexes (in keeping with the desktop metaphor).
+              #profile.tab-pane.animated
+                p
+                  | In the area of graphical user interfaces (GUI), a
+                  strong tabbed document interface
+                  |  (TDI) or a Tab is one that allows multiple documents to be contained within a single window, using tabs as a navigational widget for switching between sets of documents. It is an interface style most commonly associated with web browsers, web applications, text editors, and preference panes.
+                p
+                  | GUI tabs are modeled after traditional card tabs inserted in paper files or card indexes (in keeping with the desktop metaphor).
+              //- #dropdown1.tab-pane.fade
+                p
+                  | In the area of graphical user interfaces (GUI), a
+                  strong tabbed document interface
+                  |  (TDI) or a Tab is one that allows multiple documents to be contained within a single window, using tabs as a navigational widget for switching between sets of documents. It is an interface style most commonly associated with web browsers, web applications, text editors, and preference panes.
+                p
+                  | GUI tabs are modeled after traditional card tabs inserted in paper files or card indexes (in keeping with the desktop metaphor).
+              //- #dropdown2.tab-pane.fade
+                p
+                  | In the area of graphical user interfaces (GUI), a
+                  strong tabbed document interface
+                  |  (TDI) or a Tab is one that allows multiple documents to be contained within a single window, using tabs as a navigational widget for switching between sets of documents. It is an interface style most commonly associated with web browsers, web applications, text editors, and preference panes.
+                p
+                  | GUI tabs are modeled after traditional card tabs inserted in paper files or card indexes (in keeping with the desktop metaphor).
+        // //Tabs
+        // Vertical Menus
+        //- .col-lg-4
+          h3.sub-title Vertical Menus
+          ul.nav.nav-pills.nav-stacked
+            li.active
+              a(href='#') Active Menu Item
+            li
+              a(href='#') Menu Item
+            li
+              a(href='#') Menu Item
+            li.disabled
+              a(href='#') Disabled Menu Item
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')  Dropdown
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li
+                  a(href='#') Separated link
+        // Vertical Menus
+      // Tabs & Vertical Menus
+    // //NAVIGATIONS
+
+    //
+      FORMS
+      ==================================================
+    .docs-section
+      div
+        h3#example-typo Inputs
+      // Inputs
+      .row.example-row.example-forms.example-inputs
+        .col-md-3
+          .form-group.has-success
+            label.control-label(for='inputSuccess') Input success
+            input#inputSuccess.form-control(type='text')
+        .col-md-3
+          .form-group.has-error
+            label.control-label(for='inputError') Input error
+            input#inputError.form-control(type='text')
+        .col-md-3
+          .form-group.has-warning
+            label.control-label(for='inputWarning') Input warning
+            input#inputWarning.form-control(type='text')
+        .col-md-3
+          .form-group
+            label.control-label(for='disabledInput') Disabled input
+            input#disabledInput.form-control(disabled='disabled', type='text')
+      // //Inputs
+    // //FORMS
+
+    //
+      INDICATORS
+      ==================================================
+    .docs-section
+      h2#example-indicators.name-title Indicators
+      // Alerts
+      h3.sub-title Alerts and Notifications
+      .row.example-row.example-indicators
+        .col-md-6
+          .alert.alert-danger
+            h4 Error message title
+            p
+              | Cras ac dignissim mauris. Duis odio diam, rutrum ut est at, scelerisque malesuada risus.
+        .col-md-6
+          .alert.alert-success
+            h4 Sussess message title
+            p
+              | Cras ac dignissim mauris. Duis odio diam, rutrum ut est at, scelerisque malesuada risus.
+      .row.example-row.example-indicators
+        .col-md-6
+          .alert.alert-info
+            h4 Info message title
+            p
+              | Cras ac dignissim mauris. Duis odio diam, rutrum ut est at, scelerisque malesuada risus.
+        .col-md-6
+          .alert.alert-warning
+            h4 Warning message title
+            p
+              | Cras ac dignissim mauris. Duis odio diam, rutrum ut est at, scelerisque malesuada risus.
+      // Alerts
+
+      // Labels & Badges
+      .row.example-row.example-indicators
+        .col-lg-7
+          h3.sub-title Badges
+          .example
+            ul.nav.nav-pills.nav-badges
+              li.active
+                a(href='#')
+                  | Home
+                  span.badge 42
+              li
+                a(href='#') Profile
+              li
+                a(href='#')
+                  | Messages
+                  span.badge 25
+              li
+                a(href='#')
+                  | Notices
+                  span.badge 2
+        .col-lg-5
+          h3.sub-title Labels
+          .example
+            span.label.label-default Default
+            span.label.label-primary Primary
+            span.label.label-success Success
+            span.label.label-info Info
+            span.label.label-warning Warning
+            span.label.label-danger Danger
+      // Labels & Badges
+    // //INDICATORS

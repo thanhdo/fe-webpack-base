@@ -1,0 +1,38 @@
+.breadcrumb {
+  padding: 0;
+  margin-bottom: 15px;
+  @include min-sm{
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    list-style: none;
+    display: inline-block;
+
+    @include min-sm {
+      font-size: 2.2rem;
+      line-height: 3rem;
+    }
+
+    & + .breadcrumb__item {
+      &:before {
+        content: "/";
+        color: #292E2F;
+        font-size: inherit;
+        padding-right: 5px;
+        display: inline-block;
+      }
+    }
+
+    a {
+      color: #292E2F;
+      font-size: 1.5rem;
+
+      @include min-sm {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

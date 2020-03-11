@@ -1,0 +1,60 @@
+@mixin dropdown {
+    .dropdown {
+        display: inline-block;
+        position: relative;
+
+        // INFO: change hover property to test dropdown
+        &:hover {
+            .dropdown-menu {
+                display: block;
+            }
+        }
+
+        &-button {
+            padding: 0 15px 0 10px;
+            &:after {
+                display: inline-block;
+                font-family: icomoon;
+                content: "\e901";
+            }
+        }
+
+        &-menu {
+            @include media-breakpoint-up(md) {
+                position: absolute;
+            }
+
+            display: none;
+            // INFO: change display property to test dropdown
+            // display: block;
+            // width: 200px;
+            box-shadow: 1px 1px 1px 1px #ccc;
+            padding: 5px;
+            border-radius: 5px;
+
+            li {
+                padding: 5px 25px;
+                list-style-type: none;
+                // INFO: change this to match to design wireframe
+                // &:not(:last-of-type) {
+                //     border-bottom: solid 1px #ccc;
+                // }
+                &:hover {
+                    background: #ccc;
+                }
+
+                a {
+                    // INFO: prevent anchor breaks into 2 lines
+                    // this will support dynamic content for anchor
+                    // the width of dropdown will equal to the length of anchor
+                    white-space: nowrap;
+                    display: block;
+
+                    @include media-breakpoint-up(md) {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

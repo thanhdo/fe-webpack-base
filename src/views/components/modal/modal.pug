@@ -1,0 +1,12 @@
+#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    //- .modal-dialog.modal-dialog-centered(role='document')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h4#exampleModalLabel.modal-title Do you want to leave this page?
+          a.close.icon-close(data-dismiss='modal' aria-label='Close')
+        .modal-body
+          | You have unsaved changes. If you leave this page, these change will be lost.
+        .modal-footer
+          button(type='button' data-dismiss='modal') Close
+          button(type='button') Save changes
