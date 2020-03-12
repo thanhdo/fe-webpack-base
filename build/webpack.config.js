@@ -205,7 +205,6 @@ module.exports = (env) => {
 
   // INFO: add plugin for pages in utils.js
   config.plugins.push(...utils.pages(env));
-  config.plugins.push(...utils.pagescard(env));
 
   if (!devMode) {
     config.plugins.push(

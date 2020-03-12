@@ -3,7 +3,7 @@ import Header from './views/components/header/header';
 import Language from './views/components/language/language';
 import SlideShow from './views/components/banner-slideshow/banner-slideshow';
 import NavTab from './views/components/nav-tab/nav-tab';
-// import Bootstrap from './views/bootstrap/src/index';
+import Bootstrap from './views/bootstrap/src/index';
 
 require('slick-carousel/slick/slick.js');
 require('slick-carousel/slick/slick.scss');
