@@ -30,7 +30,7 @@ $gray-lightest:          $gray-100; // Add gray lightest
 // Brand colors
 // -------------------------
 
-$primary:         #008347;
+$primary:         #145cd3;
 $secondary:       #ed111c;
 $success:         #5cb85c;
 $warning:         #ffdb00;
@@ -52,7 +52,9 @@ $theme-colors: map-merge(
 // Body
 
 $body-bg:               #fff;
-$text-color:            $gray-600;
+$body-color:            $gray-dark;
+$text-color:            $gray;
+$border-color:          $gray-300;
 
 
 // Links
@@ -70,9 +72,10 @@ $font-family-serif:       'Proxima Nova', serif;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-serif;
 
-$font-size-base:          1.8rem;
-$font-size-large:         2rem;
-$font-size-small:         1.6rem;
+$font-size-base:          1.6rem;
+$font-size-large:         1.8rem;
+$font-size-small:         1.4rem;
+$font-size-smaller:       1.2rem;
 
 $font-weight-lighter:     100;
 $font-weight-light:       300;
@@ -81,12 +84,12 @@ $font-weight-bold:        600;
 $font-weight-black:       700;
 $font-weight-bolder:      900;
 
-$h1-font-size:            5rem;
-$h2-font-size:            4.4rem;
-$h3-font-size:            3.6rem;
-$h4-font-size:            2.4rem;
-$h5-font-size:            $font-size-base;
-$h6-font-size:            1.6rem;
+$h1-font-size:            4.4rem;
+$h2-font-size:            4rem;
+$h3-font-size:            3.2rem;
+$h4-font-size:            2.8rem;
+$h5-font-size:            1.8rem;
+$h6-font-size:            $font-size-base;
 
 $line-height-base:        1.5;
 $line-height-computed:    floor($font-size-base * $line-height-base);
@@ -94,7 +97,7 @@ $line-height-computed:    floor($font-size-base * $line-height-base);
 $headings-font-family:    $font-family-sans-serif;
 $headings-font-weight:    $font-weight-bold;
 $headings-line-height:    1.33333;
-$headings-color:          $gray-900;
+$headings-color:          $gray-dark;
 
 $border-radius:               .3rem;
 $border-radius-lg:            .4rem;
@@ -105,8 +108,8 @@ $border-radius-sm:            .2rem;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         1rem;
-$input-btn-padding-x:         2rem;
+$input-btn-padding-y:         0.5rem;
+$input-btn-padding-x:         3rem;
 $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-base;
 $input-btn-line-height:       $line-height-base;
@@ -119,7 +122,7 @@ $btn-box-shadow:              0 0 5px rgba($black, 0.2);
 $btn-padding-y:               $input-btn-padding-y;
 $btn-padding-x:               $input-btn-padding-x;
 $btn-font-family:             $input-btn-font-family;
-$btn-font-size:               1.8rem;
+$btn-font-size:               $font-size-small;
 $btn-line-height:             2;
 $btn-border-radius:           0;
 
@@ -153,22 +156,6 @@ $btn-secondary-border-hover:     $white;
 $btn-secondary-color-active:     $secondary;
 $btn-secondary-bg-active:        rgba($btn-secondary-bg, 0.1);
 $btn-secondary-border-active:    rgba($btn-secondary-bg, 0.1);
-
-// $btn-success-color:              #fff;
-// $btn-success-bg:                 $success;
-// $btn-success-border:             $success;
-
-// $btn-warning-color:              #fff;
-// $btn-warning-bg:                 $warning;
-// $btn-warning-border:             $warning;
-
-// $btn-danger-color:               #fff;
-// $btn-danger-bg:                  $danger;
-// $btn-danger-border:              $danger;
-
-// $btn-info-color:                 #fff;
-// $btn-info-bg:                    $info;
-// $btn-info-border:                $info;
 
 
 // Forms
@@ -241,7 +228,7 @@ $grid-breakpoints: (
   md: 992px,
   lg: 1200px,
   xl: 1400px,
-  // xxl: 1920px
+  xxl: 1920px
 );
 
 $container-max-widths: (
@@ -294,9 +281,9 @@ $screen-xl-desktop:       $min-xl;
 
 // xxLarge screen / wide desktop
 // Note: Deprecated $screen-xxl and $screen-xxl-desktop
-// $screen-xxl:               grid-breakpoints(xxl);
-// $min-xxl:                  $screen-xxl;
-// $screen-xxl-desktop:       $min-xxl;
+$screen-xxl:               grid-breakpoints(xxl);
+$min-xxl:                  $screen-xxl;
+$screen-xxl-desktop:       $min-xxl;
 
 // So media queries don't overlap when required, provide a maximum
 $max-xxs:         ($min-xs - 1);
@@ -304,7 +291,23 @@ $max-xs:          ($min-sm - 1);
 $max-sm:          ($min-md - 1);
 $max-md:          ($min-lg - 1);
 $max-lg:          ($min-xl - 1);
-// $max-xlg:         ($min-xxl - 1);
+$max-xlg:         ($min-xxl - 1);
+
+
+// Container max width
+// ------------------------------------------
+
+// container ipad
+$container-sm:      container-max-widths(sm);
+
+// container ipad
+$container-md:      container-max-widths(md);
+
+// container laptop
+$container-lg:      container-max-widths(lg);
+
+// container xl desktop
+$container-xl:      container-max-widths(xl);
 
 
 // Global Margin& Padding
@@ -330,10 +333,10 @@ $footer-text-color:      $gray-200;
 $sub-menu-background:         brown;
 $sub-menu-link-color:         #fff;
 $main-menu-link-color:        #8A9496;
-$main-menu-link-hover-color:  #008347;
+$main-menu-link-hover-color:  $primary;
 $sub-menu-border-radius:      0;
 $main-menu-link-hover-bg:     transparent;
-$sub-menu-background:       #008347;
+$sub-menu-background:       $primary;
 $sub-menu-box-shadow:         none;
 // INFO: waiting for mobile design
 // $sub-menu-arrow-display: none;

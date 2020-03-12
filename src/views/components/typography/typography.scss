@@ -1,3 +1,7 @@
+.core-typo {
+  padding: 40px 0;
+}
+
 // Typo
 .docs-section {
   margin-bottom: $global-margin;
@@ -12,7 +16,7 @@
   }
 
   .sub-title {
-    font-size: $h3-font-size;
+    font-size: $h4-font-size;
     font-weight: 700;
     text-transform: uppercase;
     color: $gray;

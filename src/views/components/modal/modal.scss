@@ -9,7 +9,7 @@
             border-radius: 0;
             border: none;
             padding: 30px 25px 15px;
-            color: #008347;
+            color: $primary;
 
             &:after {
                 position: absolute;
@@ -18,7 +18,7 @@
                 right: -40px;
                 top: -40px;
                 content: '';
-                background-color: #008347;
+                background-color: $primary;
                 z-index: 0;
                 transform: rotate(45deg);
             }

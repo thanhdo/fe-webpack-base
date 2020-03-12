@@ -23,7 +23,7 @@ $mobile-menu-width: 50px !default;
 $mobile-menu-height: 50px !default;
 $mobile-menu-border: solid 1px !default;
 
-$main-logo-height: 50px !default;
+$main-logo-height: 30px !default;
 
 $navbar-secondary-height: 46px !default;
 $navbar-secondary-hover-border-height: 2px !default;
@@ -273,11 +273,11 @@ $navbar-secondary-hover-border-height: 2px !default;
 
           &:hover,
           &:focus {
-            color: #008347;
+            color: $primary;
             text-decoration: none;
             // INFO: we need to decrease the height of element to
             // compensate for border top when hover/focus
-            border-top: solid $navbar-secondary-hover-border-height #008347;
+            border-top: solid $navbar-secondary-hover-border-height $primary;
             height: calc(100% - #{$navbar-secondary-hover-border-height});
           }
         }
@@ -322,7 +322,8 @@ $navbar-secondary-hover-border-height: 2px !default;
 
     .main-logo {
       img {
-        object-fit: contain;
+        width: auto;
+        height: auto;
       }
     }
   }
@@ -336,7 +337,7 @@ $navbar-secondary-hover-border-height: 2px !default;
       padding: 5px 25px;
       border: none;
       outline: none;
-      @include button(#008347, #fff);
+      @include button($primary, $white);
     }
 
     .navbar-sticky {

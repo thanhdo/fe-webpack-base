@@ -3,6 +3,7 @@
 .core-typo
   .container
     .docs-section
+      h2#example-colors.name-title Typography
       // Headings
       .row.example-row.example-type
         .col-lg-6
@@ -167,7 +168,7 @@
         .col-xs-12.col-sm-4
           .swatch-item.color-primary
             dl
-              dt #008347
+              dt #145cd3
               dd Brand Primary
         .col-xs-12.col-sm-4
           .swatch-item.color-secondary
@@ -266,9 +267,9 @@
           .nav-tab
             ul.nav-tab__link
               li
-                a.active(href='#home', data-toggle='tab') Home
+                a.active(href='#home', data-link='home') Home
               li
-                a(href='#profile', data-toggle='tab') Profile
+                a(href='#profile', data-link='profile') Profile
               //- li
                 a.disabled Disabled
               //- li.dropdown
@@ -281,14 +282,14 @@
                   li
                     a(href='#dropdown2', data-toggle='tab') Another action
             .nav-tab__content
-              #home.animated.active.fadeInUp
+              #home.home.tab-pane.animated.active.fadeInUp
                 p
                   | In the area of graphical user interfaces (GUI), a
                   strong tabbed document interface
                   |  (TDI) or a Tab is one that allows multiple documents to be contained within a single window, using tabs as a navigational widget for switching between sets of documents. It is an interface style most commonly associated with web browsers, web applications, text editors, and preference panes.
                 p
                   | GUI tabs are modeled after traditional card tabs inserted in paper files or card indexes (in keeping with the desktop metaphor).
-              #profile.tab-pane.animated
+              #profile.profile.tab-pane.animated
                 p
                   | In the area of graphical user interfaces (GUI), a
                   strong tabbed document interface

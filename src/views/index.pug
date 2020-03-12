@@ -4,8 +4,8 @@ block title
   title My Page - Index
 
 block content
-  - var pages = { componentshowcase: '/homepage.html', homepage: '/home-page.html', typography: '/typography.html'}
-  - var pagescard = { cardServices: '/card-services.html', cardDetail: '/card-detail.html', cardCompare: '/card-compare.html'}
+  - var pages = { homepage: '/home-page.html', typography: '/typography.html'}
+  - var pages2 = {componentshowcase: '/homepage.html'}
 
   //- Desktop page
   section.page.home__page
@@ -19,6 +19,6 @@ block content
 
       h1.page__title # Card
       ul(style="list-style: disc; padding-left: 4rem; margin: 4rem 0")
-        each val, index in pagescard
+        each val, index in pages2
           li
             a(href=val)= index
