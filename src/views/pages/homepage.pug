@@ -10,13 +10,14 @@ block basicSeo
 
 block content
   include ../components/banner-slideshow/banner-slideshow.pug
-  // Navtab
-  include ../components/nav-tab/nav-tab.pug
-  // Button trigger modal
-  button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModal')
-    | Launch demo modal
-  // Modal
-  include ../components/modal/modal.pug
-  // Accordion
-  include ../components/accordion/accordion.pug
+  .container
+    // Button trigger modal
+    button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModal')
+      | Launch demo modal
+    // Modal
+    include ../components/modal/modal.pug
+    // Navtab
+    include ../components/nav-tab/nav-tab.pug
+    // Accordion
+    include ../components/accordion/accordion.pug
 
