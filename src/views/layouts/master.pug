@@ -9,8 +9,12 @@ html(lang='jp')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
 
-    meta(name='msapplication-TileColor', content='#0E0E0E')
-    meta(name='theme-color', content='#0E0E0E')
+    meta(name='mobile-web-app-capable' content='yes')
+    meta(name='msapplication-TileColor' content='#0E0E0E')
+    meta(name='msapplication-TileImage' content='images/favicons/mstile-150x150.png')
+    meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
+    meta(name='theme-color' content='#0E0E0E')
+    meta(name="format-detection" content="telephone=no")
 
     //- SEO
 
@@ -19,6 +23,7 @@ html(lang='jp')
       meta(name='description' content='Index page')
       meta(name='keywords', content='index, page')
       meta(name='author' content='')
+      link(rel='canonical' href='index.html')
 
     //- Twitter
     meta(name='twitter:card', content='summary')
@@ -33,9 +38,13 @@ html(lang='jp')
     meta(property='og:image', content='')
     meta(property='og:type', content='website')
 
-
     //- Favicons
-    link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+    link(rel='apple-touch-icon' sizes='180x180' href=require('images/favicons/apple-touch-icon.png'))
+    link(rel='icon' type='image/png' sizes="32x32" href=require('images/favicons/favicon-32x32.png'))
+    link(rel='shortcut icon' href=require('images/favicons/favicon.ico'))
+    link(rel='mask-icon' color="#5bbad5" href=require('images/favicons/safari-pinned-tab.svg'))
+    //- link(rel='manifest' href=require('images/favicons/site-webmanifest'))
+
 
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
@@ -47,6 +56,9 @@ html(lang='jp')
       title Your project!
   //- TODO -INFO: this is hot fix for late css rendering problem during development. The visiblity for body is show later in app.js
   body(style="visibility:hidden;")
+    //- mixins
+    include ../mixins/mixins.pug
+
     //- header
     include ../components/header/header.pug
 

@@ -1,0 +1,12 @@
+mixin article(dataImg)
+  .article(class!=attributes.class)
+    picture.article__picture
+      a(href="#")
+        img.article__picture--img(src=dataImg alt="#")
+    .article__content
+      h5.article__content--title
+        a(href="#") Duis Aute Irure Tempor
+      .article__content--description
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        a(href="") Xem thêm
+    

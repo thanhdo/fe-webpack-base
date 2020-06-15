@@ -1,0 +1,13 @@
+mixin horizontal-card(dataImg, dataTitle, dataCost, dataDesc,dataImgBrandInsurrance)
+  .horizontal-card
+    picture.horizontal-card__image
+      img(src=`${dataImg}`, alt="")
+    .horizontal-card__content
+      h5.horizontal-card__content-title
+        a(href="#")= dataTitle
+      .horizontal-card__content--price-img
+        span.horizontal-card__content-cost= dataCost
+        a.brand-insurrance(href="#")
+          img(src=`${dataImgBrandInsurrance}`, alt="")
+      p.horizontal-card__content-desc= dataDesc
+      a(href="").btn.btn-primary Xem thêm  
