@@ -1,35 +1,48 @@
-@import '_icomoon';
+@import './base/_icomoon';
 
+// Font Krub
+// --------------------
 @font-face {
-    font-family: 'Fontawesome';
-    font-display: fallback;
-    src: url('./fonts/FontAwesome/FontAwesome.woff') format('woff');
-    font-style: normal;
+  font-family: "Krub";
+  font-display: fallback;
+  src: url("./fonts/Krub/krub-regular.woff2") format("woff2"),
+       url("./fonts/Krub/krub-regular.woff") format("woff");
+  font-weight: normal;
 }
 
+// Krub Bold
 @font-face {
-    font-family: 'Kreon';
-    font-display: fallback;
-    src: url('./fonts/Kreon/Kreon-Light.woff') format('woff'),
-        url('./fonts/Kreon/Kreon-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Krub";
+  font-display: fallback;
+  src: url("./fonts/Krub/krub-bold.woff2") format("woff2"),
+       url("./fonts/Krub/krub-bold.woff") format("woff");
+  font-weight: 600;
 }
 
+// Font Proxima
+// --------------------
 @font-face {
-    font-family: 'Kreon';
-    font-display: fallback;
-    src: url('./fonts/Kreon/Kreon-Regular.woff') format('woff'),
-        url('./fonts/Kreon/Kreon-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: fallback;
+  src: url("./fonts/Proxima/proxima_nova_regular.woff2") format("woff2"),
+       url("./fonts/Proxima/proxima_nova_regular.woff") format("woff");
+  font-weight: normal;
 }
 
+// Proxima Light
 @font-face {
-    font-family: 'Kreon';
-    font-display: fallback;
-    src: url('./fonts/Kreon/Kreon-Bold.woff') format('woff'),
-        url('./fonts/Kreon/Kreon-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: fallback;
+  src: url("./fonts/Proxima/proxima_nova_light.woff2") format("woff2"),
+       url("./fonts/Proxima/proxima_nova_light.woff") format("woff");
+  font-weight: 300;
+}
+
+// Proxima Bold
+@font-face {
+  font-family: "Proxima Nova";
+  font-display: fallback;
+  src: url("./fonts/Proxima/proxima_nova_bold.woff2") format("woff2"),
+       url("./fonts/Proxima/proxima_nova_bold.woff") format("woff");
+  font-weight: 600;
 }

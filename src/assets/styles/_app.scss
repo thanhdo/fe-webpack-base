@@ -2,24 +2,22 @@
 //   EN font
 // */
 // @import './base/font-language/en-EN';
-// @import './base/_functions';
-// @import './base/_variables';
-// @import './base/_mixins';
-@import './base/_fonts';
-// @import './base/_global';
-// @import './base/_flexboxgrid';
-// @import './base/_lazyload';
 
-// Variable & mixins
-@import './functions';
-@import './variables';
-@import './mixins';
+// Booststrap grid
+@import './bootstrap/functions';
+@import './bootstrap/variables';
+@import './bootstrap/mixins';
+@import './bootstrap/grid';
+
+// Variable & mixins overide
+// @import './base/font-language/en-EN';
+@import './base/_functions';
+@import './base/_variables';
+@import './base/_mixins';
+// @import './base/_flexboxgrid';
 
 // Bootstrap
-@import './bootstrap/bootstrap-reboot';
-// @import './bootstrap/bootstrap-grid';
-// @import './bootstrap/utilities/flex';
-@import './bootstrap/grid';
+@import './bootstrap/reboot';
 @import './bootstrap/alert';
 @import './bootstrap/code';
 @import './bootstrap/modal';
@@ -31,14 +29,14 @@
 @import './bootstrap/utilities/clearfix';
 @import './bootstrap/utilities/text';
 @import './bootstrap/utilities/embed';
-// @import './bootstrap/utilities/spacing';
-// @import './bootstrap/utilities/background';
+@import './bootstrap/utilities/display';
 
 // Global
-@import './global';
-@import './form';
-@import './fonts';
-@import './animation';
+@import './base/_global';
+@import './base/_form';
+@import './base/_fonts';
+@import './base/_animation';
+// @import './base/_lazyload';
 
 // Component
 @import '../../views/components/header/header';

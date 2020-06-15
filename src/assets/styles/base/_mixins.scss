@@ -1,209 +1,147 @@
-// Breakpoint
-@mixin min-xl {
-    @media screen and (min-width: #{breakpoints(xl)}) {
-        @content;
+@mixin button($background, $color) {
+    background: $background;
+    color: $color;
+  
+    &:hover,
+    &:focus {
+      background: darken($background, 15%);
     }
-}
-
-@mixin min-lg {
-    @media screen and (min-width: #{breakpoints(lg)}) {
-        @content;
+  }
+  
+  
+  // Min media queries breakpoints
+  // --------------------------------------------------
+  
+  // min screen 0
+  @mixin min-xxs {
+    @media screen and (min-width: $min-xxs) {
+      @content;
     }
-}
-
-@mixin min-md {
-    @media (min-width: #{breakpoints(md)}) {
-        @content;
+  }
+  
+  // min screen 375px
+  @mixin min-xs {
+    @media screen and (min-width: $min-xs) {
+      @content;
     }
-}
-
-@mixin min-sm {
-    @media (min-width: #{breakpoints(sm)}) {
-        @content;
+  }
+  
+  // min screen 576px
+  @mixin min-sm {
+    @media screen and (min-width: $min-sm) {
+      @content;
     }
-}
-
-@mixin min-smplus {
-    @media (min-width: #{breakpoints(sm)} + 1px) {
-        @content;
+  }
+  
+  // min screen 768px
+  @mixin min-md {
+    @media screen and (min-width: $min-md) {
+      @content;
     }
-}
-
-@mixin min-xs {
-    @media screen and (min-width: #{breakpoints(xs)}) {
-        @content;
+  }
+  
+  // min screen 992px
+  @mixin min-lg {
+    @media screen and (min-width: $min-lg) {
+      @content;
     }
-}
-
-@mixin min-xxs {
-    @media screen and (max-width: #{breakpoints(xxs)}) {
-        @content;
+  }
+  
+  // min screen 1200px
+  @mixin min-xl {
+    @media screen and (min-width: $min-xl) {
+      @content;
     }
-}
-
-@mixin desktop {
-    @media screen and (min-width: #{breakpoints(lg) + 1px}) {
-        @content;
+  }
+  
+  // min screen 1440px
+  @mixin min-xxl {
+    @media screen and (min-width: $min-xxl) {
+      @content;
     }
-}
-
-@mixin device {
-    @media screen and (max-width: #{breakpoints(lg)}) {
-        @content;
+  }
+  
+  
+  // Max media queries breakpoints
+  // --------------------------------------------------
+  
+  // max screen 479px
+  @mixin max-xxs {
+    @media screen and (max-width: $max-xxs) {
+      @content;
     }
-}
-
-@mixin tablet {
-    @media (min-width: #{breakpoints(sm)}) and (max-width: #{breakpoints(lg)}) {
-        @content;
+  }
+  
+  // max screen 767px
+  @mixin max-xs {
+    @media screen and (max-width: $max-xs) {
+      @content;
     }
-}
-
-@mixin mobile {
-    @media screen and (max-width: #{breakpoints(sm) - 1px}) {
-        @content;
+  }
+  
+  // max screen 991px
+  @mixin max-sm {
+    @media screen and (max-width: $max-sm) {
+      @content;
     }
-}
-
-@mixin not-mobile {
-    @media screen and (min-width: #{breakpoints(sm)}) {
-        @content;
+  }
+  
+  // max screen 1199px
+  @mixin max-md {
+    @media screen and (max-width: $max-md) {
+      @content;
     }
-}
-
-@mixin print {
-    @media print {
-        @content;
+  }
+  
+  // max screen 1399px
+  @mixin max-lg {
+    @media screen and (max-width: $max-lg) {
+      @content;
     }
-}
-
-@mixin landscape {
-    @media screen and (orientation: landscape) {
-        @content;
-    }
-}
-
-@mixin portrait {
-    @media screen and (orientation: portrait) {
-        @content;
-    }
-}
-
-@mixin ie {
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        @content;
-    }
-}
-
-@mixin flexbox() {
+  }
+  
+  // max screen 1919px
+  // @mixin max-xl {
+  //   @media screen and (max-width: $max-xl) {
+  //     @content;
+  //   }
+  // }
+  
+  // mixins dotdotdot
+  @mixin dotdotdot($font-size: $font-size-base, $line-height: $line-height-base, $lines-to-show: 3, $excerpt-bg: transparent) {
+    background: $excerpt-bg;
+    display: block; /* Fallback for non-webkit */
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-@mixin clearfix() {
-
-    &:before,
-    &:after {
+    max-height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // Fallback for non-webkit
+    @media /*screen and (min--moz-device-pixel-ratio:0), */
+    screen and (-ms-high-contrast: active), 
+    screen and (-ms-high-contrast: none) {
+      overflow: hidden;
+      position: relative;
+      &:before {
+        background: $excerpt-bg;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        float: right;
+        content: '\2026';
+        margin-left: -3rem;
+        width: 3rem;
+      }
+      &:after {
         content: '';
-        display: table;
-        clear: both;
+        background: $excerpt-bg;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        z-index: 1;
+      }
     }
-}
-
-@mixin scale($value) {
-    -webkit-transform: scale($value);
-    -moz-transform: scale($value);
-    -ms-transform: scale($value);
-    -o-transform: scale($value);
-    transform: scale($value);
-}
-
-@mixin scale2D($value, $value2) {
-    -webkit-transform: scale($value, $value2);
-    -moz-transform: scale($value, $value2);
-    -ms-transform: scale($value, $value2);
-    -o-transform: scale($value, $value2);
-    transform: scale($value, $value2);
-}
-
-@mixin translateX($left) {
-    -webkit-transform: translateX($left);
-    -moz-transform: translateX($left);
-    -ms-transform: translateX($left);
-    -o-transform: translateX($left);
-    transform: translateX($left);
-}
-
-@mixin translateY($top) {
-    -webkit-transform: translateY($top);
-    -moz-transform: translateY($top);
-    -ms-transform: translateY($top);
-    -o-transform: translateY($top);
-    transform: translateY($top);
-}
-
-@mixin translateZ($right) {
-    -webkit-transform: translateZ($right);
-    -moz-transform: translateZ($right);
-    -ms-transform: translateZ($right);
-    -o-transform: translateZ($right);
-    transform: translateZ($right);
-}
-
-@mixin translate2D($x, $y) {
-    -webkit-transform: translate($x, $y);
-    -moz-transform: translate($x, $y);
-    -ms-transform: translate($x, $y);
-    -o-transform: translate($x, $y);
-    transform: translate($x, $y);
-}
-
-@mixin translate3D($x, $y, $z) {
-    -webkit-transform: translate3d($x, $y, $z);
-    -moz-transform: translate3d($x, $y, $z);
-    -ms-transform: translate3d($x, $y, $z);
-    -o-transform: translate3d($x, $y, $z);
-    transform: translate3d($x, $y, $z);
-}
-
-@mixin rotate($deg) {
-    -webkit-transform: rotate($deg);
-    -moz-transform: rotate($deg);
-    -ms-transform: rotate($deg);
-    -o-transform: rotate($deg);
-    transform: rotate($deg);
-}
-
-@mixin typography($ff, $fw, $fz, $lh) {
-    font-family: $ff;
-    font-weight: $fw;
-    font-size: $fz;
-    line-height: $lh;
-}
-
-@mixin placeholder() {
-    &.placeholder {
-        @content;
-    }
-    &::placeholder {
-        @content;
-    }
-    &:-moz-placeholder {
-        @content;
-    }
-    &::-moz-placeholder {
-        @content;
-    }
-    &::-webkit-input-placeholder {
-        @content;
-    }
-    &:-ms-input-placeholder {
-        @content;
-    }
-    &::-ms-input-placeholder {
-        @content;
-    }
-}
+  }

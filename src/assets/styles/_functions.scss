@@ -1,4 +1,0 @@
-// Grid Breakpoints
-@function grid-breakpoints($breakpoint) {
-  @return map-get($grid-breakpoints, $breakpoint);
-}

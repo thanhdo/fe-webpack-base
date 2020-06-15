@@ -72,6 +72,6 @@
     "sticky-js": "^1.2.0",
     "tippy.js": "^3.2.0",
     "vanilla-lazyload": "^10.0.1",
-    "yarn": "^1.10.1"
+    "yarn": "^1.22.4"
   }
 }
