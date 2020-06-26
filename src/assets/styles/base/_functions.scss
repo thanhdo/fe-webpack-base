@@ -1,9 +1,9 @@
 // Grid Breakpoints
 @function grid-breakpoints($breakpoint) {
-    @return map-get($grid-breakpoints, $breakpoint);
-  }
-  
-  // Container Widths
-  @function container-max-widths($max-width) {
-    @return map-get($container-max-widths, $max-width);
-  }
+  @return map-get($grid-breakpoints, $breakpoint);
+}
+
+// Container Widths
+@function container-max-widths($max-width) {
+  @return map-get($container-max-widths, $max-width);
+}

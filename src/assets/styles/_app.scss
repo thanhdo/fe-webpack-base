@@ -3,20 +3,20 @@
 // */
 // @import './base/font-language/en-EN';
 
-// Booststrap grid
+// Booststrap variable & mixins
 @import './bootstrap/functions';
 @import './bootstrap/variables';
 @import './bootstrap/mixins';
-@import './bootstrap/grid';
 
 // Variable & mixins overide
-// @import './base/font-language/en-EN';
 @import './base/_functions';
 @import './base/_variables';
 @import './base/_mixins';
+// @import './base/font-language/en-EN';
 // @import './base/_flexboxgrid';
 
 // Bootstrap
+@import './bootstrap/grid';
 @import './bootstrap/reboot';
 @import './bootstrap/alert';
 @import './bootstrap/code';
