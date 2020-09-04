@@ -30,6 +30,11 @@ module.exports = (env) => {
         './assets/styles/_app.scss',
         './app.js',
       ],
+      critical: [
+        'slick-carousel/slick/slick.scss',
+        'slick-carousel/slick/slick-theme.scss',
+        './assets/styles/_critical.scss',
+      ],
       // app_JP: [
       //   'babel-polyfill',
       //   './assets/styles/_app-JP.scss',

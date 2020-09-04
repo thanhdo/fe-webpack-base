@@ -1,0 +1,50 @@
+// /*
+//   EN font
+// */
+// @import './base/font-language/en-EN';
+
+// Booststrap variable & mixins
+@import './bootstrap/reboot';
+@import './bootstrap/functions';
+@import './bootstrap/variables';
+@import './bootstrap/mixins';
+
+// Variable & mixins overide
+@import './base/_functions';
+@import './base/_variables';
+@import './base/_mixins';
+
+// Bootstrap
+@import './bootstrap/grid';
+@import './bootstrap/forms';
+// @import './bootstrap/alert';
+// @import './bootstrap/code';
+// @import './bootstrap/modal';
+// @import './bootstrap/type';
+// @import './bootstrap/transitions';
+// @import './bootstrap/buttons';
+// @import './bootstrap/input-group';
+// @import './bootstrap/utilities/clearfix';
+// @import './bootstrap/utilities/text';
+// @import './bootstrap/utilities/embed';
+// @import './bootstrap/utilities/display';
+
+// Global
+@import './base/_global';
+@import './base/_form';
+@import './base/_fonts';
+// @import './base/_animation';
+// @import './base/_lazyload';
+
+// Component
+@import '../../views/components/header/header';
+@import '../../views/components/language/language';
+@import '../../views/components/banner-slideshow/banner-slideshow';
+// @import '../../views/mixins/mixins-style';
+// @import '../../views/components/footer/footer';
+// @import '../../views/components/breadcrumb/breadcrumb';
+// @import '../../views/components/accordion/accordion';
+// @import '../../views/components/modal/modal';
+// @import '../../views/components/typography/typography';
+// @import '../../views/components/nav-tab/nav-tab';
+// @import '../../views/components/masthead/masthead';

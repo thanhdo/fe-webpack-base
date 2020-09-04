@@ -32,7 +32,7 @@ $(window).on('resize', () => {
 });
 
 window.addEventListener('load', () => {
-  $('body').css('visibility', 'visible');
+  // $('body').css('visibility', 'visible');
   SlideShow.init();
   NavTab.init();
 });
