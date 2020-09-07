@@ -4,7 +4,6 @@
 // @import './base/font-language/en-EN';
 
 // Booststrap variable & mixins
-@import './bootstrap/reboot';
 @import './bootstrap/functions';
 @import './bootstrap/variables';
 @import './bootstrap/mixins';
@@ -15,6 +14,7 @@
 @import './base/_mixins';
 
 // Bootstrap
+@import './bootstrap/reboot';
 @import './bootstrap/grid';
 @import './bootstrap/forms';
 // @import './bootstrap/alert';
