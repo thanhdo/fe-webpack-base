@@ -32,7 +32,7 @@ module.exports = (env) => {
       ],
       critical: [
         'slick-carousel/slick/slick.scss',
-        'slick-carousel/slick/slick-theme.scss',
+        // 'slick-carousel/slick/slick-theme.scss',
         './assets/styles/_critical.scss',
       ],
       // app_JP: [
@@ -203,7 +203,7 @@ module.exports = (env) => {
 
       // INFO: display build status message during build process
       new WebpackNotifierPlugin({
-        title: 'VP Bank',
+        title: 'FE Base',
       }),
     ],
   };
