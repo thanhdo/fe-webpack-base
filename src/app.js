@@ -16,7 +16,7 @@ $(() => {
 
 $(document).ready(() => {
   // INFO: lazyload image
-  Global.lazyLoad();
+  // Global.lazyLoad();
   Header.init();
   Language.init();
 });
@@ -25,7 +25,7 @@ $(window).on('resize', () => {
   // TODO: use throttling instead of this
   setTimeout(() => {
     // INFO: lazyload image
-    Global.lazyLoad();
+    // Global.lazyLoad();
     Header.onWindowResize();
     CardDetailContent.init();
   }, 0);

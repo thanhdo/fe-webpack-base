@@ -1,17 +1,18 @@
-import LazyLoad from 'vanilla-lazyload';
+// import LazyLoad from 'vanilla-lazyload';
+import lazysizes from "lazysizes";
 
 const Global = {
-  lazyLoad: (thresDistance) => {
-    const distance = thresDistance || 0;
-    const myLazyLoad = new LazyLoad({
-      elements_selector: '.lazy',
-      threshold: distance,
-      callback_enter: (element) => {
-        element.classList.add('loaded');
-      },
-    });
-    myLazyLoad.update();
-  },
+  // lazyLoad: (thresDistance) => {
+  //   const distance = thresDistance || 0;
+  //   const myLazyLoad = new LazyLoad({
+  //     elements_selector: '.lazy',
+  //     threshold: distance,
+  //     callback_enter: (element) => {
+  //       element.classList.add('loaded');
+  //     },
+  //   });
+  //   myLazyLoad.update();
+  // },
 
   fixBodyScrollWhenOpenModal: () => {
     document.querySelector('body').classList.add('modal-open');
