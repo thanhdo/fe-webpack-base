@@ -1,50 +1,32 @@
 .footer {
-    background: #fff;
-    font-size: 1.4rem;
-    padding: 60px 0 30px;
-    &__link {
-        padding-bottom: 25px;
-        .header {
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-        ul {
-            padding: 0;
-            li {
-                list-style: none;
-                margin-bottom: 8px;
-                a {
-                    color: black;
-                }
-            }
-        }
+  background: #fff;
+  font-size: 1.4rem;
+  padding: 60px 0 30px;
+
+  &__link {
+    padding-bottom: 25px;
+
+    &-title {
+      font-size: $h5-font-size;
+      font-weight: 700;
+      margin-bottom: 25px;
     }
 
-    &__content {
-        padding-top: 40px;
-        border-top: solid 2px #ccc;
+    ul {
+      padding: 0;
 
-        .img-logo {
+      li {
+        list-style: none;
+        margin-bottom: 8px;
+
+        a {
+          color: $footer-text-color;
+
+          @include hover-focus {
+            color: $link-color;
+          }
         }
-        
-        span:first-child {
-            display: block;
-        }
-        .img-facebook ,
-        .img-youtube {
-            margin-right: 16px;
-        }
-        .promo {
-            display: flex;
-            justify-content: flex-end;
-            .img-appstore {
-                margin-right: 16px;
-            }
-            .vpbank {
-                color: black;
-                font-weight: 700;
-                margin-right: 15px;
-            }
-        }
+      }
     }
+  }
 }
