@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-network": "webpack-dev-server --config ./build/webpack.config.js --progress --open --host 0.0.0.0",
+    "dev-network": "webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV=development --progress --open --host 192.90.20.155",
     "dev": "webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV=development --progress --open",
     "prod": "webpack --config ./build/webpack.config.js --env.NODE_ENV=production --progress",
     "build-dev": "webpack --config ./build/webpack.config.js --env.NODE_ENV=development --progress",
